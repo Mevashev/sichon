@@ -8,9 +8,10 @@ import android.widget.TextView
 import com.example.hen.sichon.R
 import com.example.hen.sichon.models.PhraseModel
 
-class PhrasesCategoryAdapter(items: List<PhraseModel>): RecyclerView.Adapter<PhrasesCategoryAdapter.ViewHolder>()
+class PhrasesCategoryAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesCategoryAdapter.ViewHolder>()
 {
-    val mItems = items
+    private val mItems = items
+    private var mListener: OnPhraseClickListener? = null
 
     override fun getItemCount(): Int
     {
@@ -20,7 +21,9 @@ class PhrasesCategoryAdapter(items: List<PhraseModel>): RecyclerView.Adapter<Phr
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_phrase, parent, false)
-        return ViewHolder(view)
+        val viewHolder = ViewHolder(view)
+        view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo) })
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int)
@@ -33,5 +36,15 @@ class PhrasesCategoryAdapter(items: List<PhraseModel>): RecyclerView.Adapter<Phr
     {
         val translateFrom = view.findViewById(R.id.text_view_translate_from) as TextView
         val translateTo = view.findViewById(R.id.text_view_translate_to) as TextView
+    }
+
+    fun setOnPhraseClickListener(listener: OnPhraseClickListener)
+    {
+        mListener = listener
+    }
+
+    interface OnPhraseClickListener
+    {
+        fun onPhraseClick(textToSpeech: String)
     }
 }
