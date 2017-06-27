@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sichon</string>
+    <string name="about">About</string>
+    <string name="favorites">Favorites</string>
+    <string name="phrases">Phrases</string>
+    <string name="search">Search</string>
 </resources>
