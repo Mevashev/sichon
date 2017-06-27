@@ -49,10 +49,9 @@ class PhrasesCategoryFragment : Fragment()
 
         phrasesCategoryAdapter.setOnPhraseClickListener(object : PhrasesCategoryAdapter.OnPhraseClickListener
         {
-            @RequiresApi(Build.VERSION_CODES.LOLLIPOP) override fun onPhraseClick(textToSpeech: String)
+            override fun onPhraseClick(textToSpeech: String)
             {
-                val tts = AppUtils.textToSpeech(activity.baseContext, Locale("ru"))
-                tts.speak(textToSpeech, TextToSpeech.QUEUE_FLUSH, null, null)
+                AppUtils.textToSpeech(activity.baseContext, Locale("ru"), textToSpeech)
             }
         })
 

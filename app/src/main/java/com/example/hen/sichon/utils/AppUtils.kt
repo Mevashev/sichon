@@ -3,7 +3,9 @@ package com.example.hen.sichon.utils
 import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
+import android.os.Build
 import android.speech.tts.TextToSpeech
+import android.support.annotation.RequiresApi
 import android.util.Log
 import java.util.*
 
@@ -21,7 +23,8 @@ class AppUtils
           return localizedContext.resources
       }
 
-      fun textToSpeech(context: Context, locale: Locale): TextToSpeech
+      @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+      fun textToSpeech(context: Context, locale: Locale, textToSpeech: String): TextToSpeech
       {
           return object
           {
@@ -31,6 +34,10 @@ class AppUtils
                   if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED)
                   {
                       Log.e("TTS", "This Language is not supported")
+                  }
+                  else
+                  {
+                      value.speak(textToSpeech, TextToSpeech.QUEUE_FLUSH, null, null)
                   }
               })
           }.value
