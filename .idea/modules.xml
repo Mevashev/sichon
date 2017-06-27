@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Sichon.iml" filepath="$PROJECT_DIR$/Sichon.iml" />
-      <module fileurl="file://C:\_Projects\Sichon\Sichon.iml" filepath="C:\_Projects\Sichon\Sichon.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\_Projects\Sichon\app\app.iml" filepath="C:\_Projects\Sichon\app\app.iml" />
     </modules>
   </component>
 </project>
