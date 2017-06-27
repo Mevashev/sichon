@@ -1,6 +1,8 @@
 package com.example.hen.sichon.activities
 
 import com.example.hen.sichon.R
+import com.example.hen.sichon.fragments.AboutFragment
+import com.example.hen.sichon.fragments.FavoritesFragment
 import com.example.hen.sichon.fragments.PhrasesCategoryFragment
 
 class MainActivity : BaseFragmentTransactionActivity() {
@@ -13,6 +15,8 @@ class MainActivity : BaseFragmentTransactionActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_phrases -> replaceFragment(false, PhrasesCategoryFragment.getInstance())
+                R.id.action_favorites -> replaceFragment(false, FavoritesFragment.getInstance())
+                R.id.action_about -> replaceFragment(false, AboutFragment.getInstance())
             }
             true
         }
