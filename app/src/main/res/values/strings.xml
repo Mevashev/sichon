@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Sichon</string>
+    
+    <string-array name="transportation">
+        <item>How do you get to…?</item>
+        <item>Do you have a map?</item>
+    </string-array>
 </resources>
