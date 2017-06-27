@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sichon</string>
+
+    <string-array name="transportation">
+        <item>Как вы добираетесь…?</item>
+        <item>У тебя есть карта?</item>
+    </string-array>
+</resources>
