@@ -11,7 +11,7 @@ import com.example.hen.sichon.models.LanguageModel
 
 class MainActivity : AppCompatActivity() {
 
-    val SPAN_COUNT = 3
+    private val SPAN_COUNT = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
