@@ -6,4 +6,8 @@
         <item>Как вы добираетесь…?</item>
         <item>У тебя есть карта?</item>
     </string-array>
+    <string name="about">около</string>
+    <string name="phrases">фразы</string>
+    <string name="favorites">избранное</string>
+    <string name="search">поиск</string>
 </resources>

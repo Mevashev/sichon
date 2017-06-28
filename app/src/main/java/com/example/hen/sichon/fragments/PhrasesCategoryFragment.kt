@@ -2,7 +2,6 @@ package com.example.hen.sichon.fragments
 
 import android.os.Build
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
@@ -49,7 +48,7 @@ class PhrasesCategoryFragment : Fragment()
 
         phrasesCategoryAdapter.setOnPhraseClickListener(object : PhrasesCategoryAdapter.OnPhraseClickListener
         {
-            override fun onPhraseClick(textToSpeech: String)
+            @RequiresApi(Build.VERSION_CODES.LOLLIPOP) override fun onPhraseClick(textToSpeech: String)
             {
                 AppUtils.textToSpeech(activity.baseContext, Locale("ru"), textToSpeech)
             }

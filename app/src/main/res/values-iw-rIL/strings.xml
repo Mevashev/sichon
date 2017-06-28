@@ -6,4 +6,8 @@
         <item>איך מגיעים ל…?</item>
         <item>יש לכם מפה?</item>
     </string-array>
+    <string name="about">אודות</string>
+    <string name="favorites">מועדפים</string>
+    <string name="search">חיפוש</string>
+    <string name="phrases">ביטויים</string>
 </resources>
