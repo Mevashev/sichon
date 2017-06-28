@@ -4,6 +4,7 @@
     <string name="favorites">Favorites</string>
     <string name="phrases">Phrases</string>
     <string name="search">Search</string>
+    <string name="select_a_language">Select a language</string>
 
     <string-array name="transportation">
         <item>How do you get to…?</item>
