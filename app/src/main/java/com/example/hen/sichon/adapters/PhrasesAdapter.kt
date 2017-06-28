@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.example.hen.sichon.R
 import com.example.hen.sichon.models.PhraseModel
 
-class PhrasesCategoryAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesCategoryAdapter.ViewHolder>()
+class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAdapter.ViewHolder>()
 {
     private val mItems = items
     private var mListener: OnPhraseClickListener? = null
@@ -32,12 +32,6 @@ class PhrasesCategoryAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<Ph
         holder?.translateTo?.text = mItems[position].translateTo
     }
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
-    {
-        val translateFrom = view.findViewById(R.id.text_view_translate_from) as TextView
-        val translateTo = view.findViewById(R.id.text_view_translate_to) as TextView
-    }
-
     fun setOnPhraseClickListener(listener: OnPhraseClickListener)
     {
         mListener = listener
@@ -46,5 +40,11 @@ class PhrasesCategoryAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<Ph
     interface OnPhraseClickListener
     {
         fun onPhraseClick(textToSpeech: String)
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
+    {
+        val translateFrom = view.findViewById(R.id.text_view_translate_from) as TextView
+        val translateTo = view.findViewById(R.id.text_view_translate_to) as TextView
     }
 }
