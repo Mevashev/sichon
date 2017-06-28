@@ -1,37 +1,29 @@
 package com.example.hen.sichon.activities
 
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import com.example.hen.sichon.R
-import com.example.hen.sichon.fragments.AboutFragment
-import com.example.hen.sichon.fragments.CategoryFragment
-import com.example.hen.sichon.fragments.FavoritesFragment
+import com.example.hen.sichon.adapters.LanguageAdapter
+import com.example.hen.sichon.decorators.LanguageItemDecorator
+import com.example.hen.sichon.models.LanguageModel
 
-class MainActivity : BaseFragmentNavigationActivity()
-{
+class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: android.os.Bundle?)
-    {
+    val SPAN_COUNT = 3
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.example.hen.sichon.R.layout.activity_main)
-        val bottomNavigationView = findViewById(com.example.hen.sichon.R.id.bottom_navigation) as android.support.design.widget.BottomNavigationView
-
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId)
-            {
-                R.id.action_phrases -> replaceFragment(false, CategoryFragment.getInstance())
-                R.id.action_favorites -> replaceFragment(false, FavoritesFragment.getInstance())
-                R.id.action_about -> replaceFragment(false, AboutFragment.getInstance())
-            }
-            true
-        }
-
-        bottomNavigationView.findViewById(R.id.action_phrases).performClick()
-
-    }
-
-    override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean
-    {
-        val inflater: android.view.MenuInflater = menuInflater
-        inflater.inflate(com.example.hen.sichon.R.menu.main_menu, menu)
-        return true
+        setContentView(R.layout.activity_main)
+        val foreignLanguageRecyclerView = findViewById(R.id.recycler_view_foreign_language) as RecyclerView
+        foreignLanguageRecyclerView.layoutManager = GridLayoutManager(this, SPAN_COUNT, GridLayoutManager.VERTICAL, false)
+        val items: ArrayList<LanguageModel> = ArrayList()
+        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.ENGLISH))
+        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.HEBREW))
+        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.RUSSIAN))
+        foreignLanguageRecyclerView.adapter = LanguageAdapter(items)
+        foreignLanguageRecyclerView.setHasFixedSize(true)
+        foreignLanguageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
     }
 }
