@@ -6,6 +6,19 @@
     <string name="search">Search</string>
     <string name="select_a_language">Select a language</string>
 
+
+    <string-array name="soft_landing">
+    </string-array>
+    <string-array name="clock">
+    </string-array>
+    <string-array name="conversation">
+    </string-array>
+    <string-array name="questions">
+    </string-array>
+    <string-array name="numbers">
+    </string-array>
+    <string-array name="colors">
+    </string-array>
     <string-array name="transportation">
         <item>How do you get to…?</item>
         <item>Do you have a map?</item>
