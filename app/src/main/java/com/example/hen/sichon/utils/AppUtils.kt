@@ -47,7 +47,7 @@ class AppUtils
             }.value
         }
 
-        fun setDefaultLocale(context: Context, locale: Locale)
+        fun setDefaultLocale(context: Context, locale: Locale?)
         {
             Locale.setDefault(locale)
 

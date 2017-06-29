@@ -17,22 +17,27 @@ import com.example.hen.sichon.models.LanguageModel
 class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<LanguageAdapter.ViewHolder>() {
 
     private var mListener: LanguageAdapter.OnLanguageClickListener? = null
-    private val mItems = items
+    private val mItems: ArrayList<LanguageModel>? = ArrayList<LanguageModel>()
+    private val mSubItems = items
+
+    init {
+        mItems?.addAll(mSubItems)
+    }
 
     override fun getItemCount(): Int {
-        return mItems.size
+        return mSubItems.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_language, parent, false)
         val viewHolder = LanguageAdapter.ViewHolder(view)
-        view.setOnClickListener({ mListener?.onLanguageClick(mItems[viewHolder.adapterPosition].language) })
+        view.setOnClickListener({ mListener?.onLanguageClick(mSubItems[viewHolder.adapterPosition].language) })
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.imageViewForeignLanguage?.setImageResource(mItems[position].image)
-        holder?.textViewForeignLanguage?.text = mItems[position].language.languageName
+        holder?.imageViewForeignLanguage?.setImageResource(mSubItems[position].image)
+        holder?.textViewForeignLanguage?.text = mSubItems[position].language.languageName
     }
 
 
@@ -48,4 +53,17 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
     interface OnLanguageClickListener {
         fun onLanguageClick(selectedLanguage: Language)
     }
+
+    fun removeThisItem(language: Language?) {
+        mSubItems.clear()
+        if (mItems != null) {
+            for (item in mItems) {
+                if (item.language != language) {
+                    mSubItems.add(item)
+                }
+            }
+        }
+        notifyDataSetChanged()
+    }
+
 }

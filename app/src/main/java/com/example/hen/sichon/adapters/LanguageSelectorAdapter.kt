@@ -29,8 +29,7 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_radio_button_language, parent, false)
         val viewHolder = LanguageSelectorAdapter.ViewHolder(view)
         view.setOnClickListener {
-            for (selector in mItems)
-            {
+            for (selector in mItems) {
                 selector.isSelected = false
             }
             mItems[viewHolder.adapterPosition].isSelected = true
@@ -57,5 +56,13 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
 
     interface OnLanguageSelectorClickListener {
         fun onLanguageSelectedClick(selectedLanguage: Language)
+    }
+
+
+    fun getSelectedLanguage(): Language {
+        return mItems
+                .firstOrNull { it.isSelected }
+                ?.language
+                ?: Language.ENGLISH
     }
 }
