@@ -25,7 +25,7 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.imageViewForeignLanguage?.setImageResource(mItems[position].image)
-        holder?.textViewForeignLanguage?.text = mItems[position].language.toString()
+        holder?.textViewForeignLanguage?.text = mItems[position].language.languageName
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
