@@ -51,7 +51,7 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
         val language = view.findViewById(R.id.language) as TextView
     }
 
-    fun setForeignLanguageClickListener(listenerSelector: OnLanguageSelectorClickListener) {
+    fun setLanguageSelectorClickListener(listenerSelector: OnLanguageSelectorClickListener) {
         mListenerSelector = listenerSelector
     }
 
