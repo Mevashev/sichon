@@ -5,6 +5,10 @@
     <string name="phrases">Phrases</string>
     <string name="search">Search</string>
     <string name="select_a_language">Select a language</string>
+    <string name="dialog_done">Done</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_title_select_language">Select your language</string>
+    <string name="language">language</string>
 
 
     <string-array name="soft_landing">

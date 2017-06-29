@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.hen.sichon.R
+import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.models.LanguageModel
 
 /**
@@ -45,6 +46,6 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
     }
 
     interface OnLanguageClickListener {
-        fun onLanguageClick(selectedLanguage: LanguageModel.Language)
+        fun onLanguageClick(selectedLanguage: Language)
     }
 }

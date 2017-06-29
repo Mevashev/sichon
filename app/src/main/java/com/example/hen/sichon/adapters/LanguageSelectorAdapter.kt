@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.TextView
 import com.example.hen.sichon.R
-import com.example.hen.sichon.models.LanguageModel
+import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.models.SelectLanguageModel
 import java.util.*
 
@@ -26,27 +26,28 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.language?.text = mItems[position].language.toString()
-        holder?.redioButton?.isChecked = mItems[position].isSelected
+        holder?.language?.text = mItems[position].language.languageName
+        holder?.radioButton?.isChecked = mItems[position].isSelected
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_languages, parent, false)
+        val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_radio_button_language, parent, false)
         val viewHolder = LanguageSelectorAdapter.ViewHolder(view)
-        view.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                mItems.forEach({it -> it.isSelected = false})
-                mItems[viewHolder.adapterPosition].isSelected = true
-                notifyDataSetChanged()
-                mListenerSelector?.onLanguageSelectedClick(mItems[viewHolder.adapterPosition].language)
+        view.setOnClickListener {
+            for (selector in mItems)
+            {
+                selector.isSelected = false
             }
-        })
+            mItems[viewHolder.adapterPosition].isSelected = true
+            notifyDataSetChanged()
+            mListenerSelector?.onLanguageSelectedClick(mItems[viewHolder.adapterPosition].language)
+        }
         return viewHolder
     }
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val redioButton = view.findViewById(R.id.radio_button) as RadioButton
+        val radioButton = view.findViewById(R.id.radio_button) as RadioButton
         val language = view.findViewById(R.id.language) as TextView
     }
 
@@ -55,6 +56,6 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
     }
 
     interface OnLanguageSelectorClickListener {
-        fun onLanguageSelectedClick(selectedLanguage: LanguageModel.Language)
+        fun onLanguageSelectedClick(selectedLanguage: Language)
     }
 }
