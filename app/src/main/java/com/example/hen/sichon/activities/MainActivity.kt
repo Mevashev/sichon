@@ -11,7 +11,7 @@ import com.example.hen.sichon.models.LanguageModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val SPAN_COUNT = 3
+    private val SPAN_COUNT = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         val foreignLanguageRecyclerView = findViewById(R.id.recycler_view_foreign_language) as RecyclerView
         foreignLanguageRecyclerView.layoutManager = GridLayoutManager(this, SPAN_COUNT, GridLayoutManager.VERTICAL, false)
         val items: ArrayList<LanguageModel> = ArrayList()
-        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.ENGLISH))
-        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.HEBREW))
-        items.add(LanguageModel(R.drawable.ic_search_black_24dp, LanguageModel.Language.RUSSIAN))
+        items.add(LanguageModel(R.drawable.united_states, LanguageModel.Language.ENGLISH))
+        items.add(LanguageModel(R.drawable.israel, LanguageModel.Language.HEBREW))
+        items.add(LanguageModel(R.drawable.russia, LanguageModel.Language.RUSSIAN))
         foreignLanguageRecyclerView.adapter = LanguageAdapter(items)
         foreignLanguageRecyclerView.setHasFixedSize(true)
         foreignLanguageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
