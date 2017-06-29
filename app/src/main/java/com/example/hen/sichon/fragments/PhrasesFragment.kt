@@ -17,7 +17,6 @@ import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.PhraseModel
 import com.example.hen.sichon.utils.AppUtils
-import java.util.*
 
 class PhrasesFragment : Fragment()
 {
@@ -62,7 +61,7 @@ class PhrasesFragment : Fragment()
         {
             @RequiresApi(Build.VERSION_CODES.LOLLIPOP) override fun onPhraseClick(textToSpeech: String)
             {
-                AppUtils.textToSpeech(activity.baseContext, Locale("ru"), textToSpeech)
+                AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
             }
         })
 
