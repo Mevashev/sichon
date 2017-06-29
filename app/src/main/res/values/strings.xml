@@ -29,6 +29,33 @@
     <string-array name="numbers">
     </string-array>
     <string-array name="colors">
+        <item>Color</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Brown</item>
+        <item>Orange</item>
+        <item>Pale Blue</item>
+        <item>Ping</item>
+        <item>Gold</item>
+        <item>Silver</item>
+        <item>Gray</item>
+        <item>Bourdeaux</item>
+        <item>Colorful</item>
+        <item>Transparent</item>
+        <item>Shiny</item>
+        <item>Bright</item>
+        <item>Dark</item>
+        <item>Light</item>
+        <item>Shade</item>
+        <item>Darkness</item>
+        <item>Shades of…</item>
+        <item>Color Mixing</item>
+        <item>Solid color</item>
     </string-array>
     <string-array name="transportation">
         <item>How do you get to…?</item>

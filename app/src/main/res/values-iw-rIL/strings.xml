@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sichon</string>
-
-    <string-array name="transportation">
-        <item>איך מגיעים ל…?</item>
-        <item>יש לכם מפה?</item>
-    </string-array>
     <string name="about">אודות</string>
     <string name="favorites">מועדפים</string>
     <string name="search">חיפוש</string>
@@ -17,4 +12,50 @@
     <string name="category_clock">שעון</string>
     <string name="category_colors">צבעים</string>
     <string name="category_transportation">תחבורה</string>
+
+
+    <string-array name="transportation">
+        <item>איך מגיעים ל…?</item>
+        <item>יש לכם מפה?</item>
+    </string-array>
+
+    <string-array name="soft_landing">
+    </string-array>
+    <string-array name="clock">
+    </string-array>
+    <string-array name="conversation">
+    </string-array>
+    <string-array name="questions">
+    </string-array>
+    <string-array name="numbers">
+    </string-array>
+    <string-array name="colors">
+        <item>צבע</item>
+        <item>כחול</item>
+        <item>ירוק</item>
+        <item>שחור</item>
+        <item>לבן</item>
+        <item>צהוב</item>
+        <item>אדום</item>
+        <item>סגול</item>
+        <item>חום</item>
+        <item>כתום</item>
+        <item>תכלת</item>
+        <item>ורוד</item>
+        <item>זהב</item>
+        <item>כסף</item>
+        <item>אפור</item>
+        <item>בורדו</item>
+        <item>צבעוני</item>
+        <item>שקוף</item>
+        <item>מבריק</item>
+        <item>בהיר</item>
+        <item>כהה</item>
+        <item>אור</item>
+        <item>צל</item>
+        <item>חושך</item>
+        <item>גוונים של…</item>
+        <item>ערבוב צבעים</item>
+        <item>צבע אחיד</item>
+    </string-array>
 </resources>

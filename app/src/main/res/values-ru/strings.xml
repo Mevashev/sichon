@@ -2,10 +2,6 @@
 <resources>
     <string name="app_name">Sichon</string>
 
-    <string-array name="transportation">
-        <item>Как вы добираетесь…?</item>
-        <item>У тебя есть карта?</item>
-    </string-array>
     <string name="about">около</string>
     <string name="phrases">фразы</string>
     <string name="favorites">избранное</string>
@@ -17,4 +13,39 @@
     <string name="category_clock">Часы</string>
     <string name="category_colors">Цвета</string>
     <string name="category_transportation">Транспорт</string>
+
+    <string-array name="transportation">
+        <item>Как вы добираетесь…?</item>
+        <item>У тебя есть карта?</item>
+    </string-array>
+
+    <string-array name="colors">
+        <item>Цвет</item>
+        <item>Синий</item>
+        <item>Зеленый</item>
+        <item>Черный</item>
+        <item>Белый</item>
+        <item>Желтый</item>
+        <item>Красный</item>
+        <item>Пурпурный</item>
+        <item>Коричневый</item>
+        <item>Оранжевый</item>
+        <item>Лазурь</item>
+        <item>Розовый</item>
+        <item>Золото</item>
+        <item>Серебряный</item>
+        <item>Серый</item>
+        <item>Бордо</item>
+        <item>Красочный</item>
+        <item>Прозрачный</item>
+        <item>Блестящий</item>
+        <item>Яркий</item>
+        <item>Темно</item>
+        <item>Легкий</item>
+        <item>Тень</item>
+        <item>Темнота</item>
+        <item>Оттенки…</item>
+        <item>Смешивание цветов</item>
+        <item>Твердый цвет</item>
+    </string-array>
 </resources>
