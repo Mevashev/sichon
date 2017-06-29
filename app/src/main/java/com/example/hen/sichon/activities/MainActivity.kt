@@ -1,7 +1,6 @@
 package com.example.hen.sichon.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -15,9 +14,10 @@ import com.example.hen.sichon.decorators.LanguageItemDecorator
 import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.models.LanguageModel
 import com.example.hen.sichon.models.SelectLanguageModel
+import com.example.hen.sichon.utils.AppUtils
 import com.example.hen.sichon.utils.DialogUtil
 
-class MainActivity : AppCompatActivity()
+class MainActivity : BaseFragmentNavigationActivity()
 {
     private val SPAN_COUNT = 1
 
@@ -42,9 +42,7 @@ class MainActivity : AppCompatActivity()
             R.id.language ->
             {
                 val view = createLanguageRecyclerView()
-                val dialog = DialogUtil.createTwoButtonsConfirmationDialog(this,R.string.dialog_title_select_language, R.string.dialog_done, R.string.dialog_cancel,
-                        MaterialDialog.SingleButtonCallback({dialog, which -> print(1) }),
-                        MaterialDialog.SingleButtonCallback({dialog, _ -> dialog.dismiss() }))
+                val dialog = DialogUtil.createTwoButtonsConfirmationDialog(this, R.string.dialog_title_select_language, R.string.dialog_done, R.string.dialog_cancel, MaterialDialog.SingleButtonCallback({ dialog, which -> print(1) }), MaterialDialog.SingleButtonCallback({ dialog, _ -> dialog.dismiss() }))
                 dialog.customView(view, true)
                 dialog.show()
             }
@@ -60,7 +58,17 @@ class MainActivity : AppCompatActivity()
         items.add(LanguageModel(R.drawable.united_states, Language.ENGLISH))
         items.add(LanguageModel(R.drawable.israel, Language.HEBREW))
         items.add(LanguageModel(R.drawable.russia, Language.RUSSIAN))
-        foreignLanguageRecyclerView.adapter = LanguageAdapter(items)
+
+        val adapter = LanguageAdapter(items)
+        adapter.setLanguageClickListener(object : LanguageAdapter.OnLanguageClickListener
+        {
+            override fun onLanguageClick(selectedLanguage: Language)
+            {
+                AppUtils.setDefaultLocale(this@MainActivity, selectedLanguage.locale)
+                startActivity(SichonActivity.getIntent(this@MainActivity))
+            }
+        })
+        foreignLanguageRecyclerView.adapter = adapter
         foreignLanguageRecyclerView.setHasFixedSize(true)
         foreignLanguageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
     }

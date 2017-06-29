@@ -1,8 +1,10 @@
 package com.example.hen.sichon.enums
 
-enum class Language(val languageName: String)
+import java.util.*
+
+enum class Language(val languageName: String, val locale: Locale)
 {
-    ENGLISH("English"),
-    HEBREW("עברית"),
-    RUSSIAN("Русский")
+    ENGLISH("English", Locale.US),
+    HEBREW("עברית", Locale("iw", "IL")),
+    RUSSIAN("Русский", Locale("ru"))
 }

@@ -21,7 +21,7 @@ class PhrasesFragment : Fragment()
 {
     companion object
     {
-        val ARG_CATEGORY_ID = "arg.CATEGORY_NAME"
+        private val ARG_CATEGORY_ID = "arg.CATEGORY_NAME"
 
         fun getInstance(@ArrayRes categoryId: Int): PhrasesFragment
         {

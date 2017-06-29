@@ -23,16 +23,16 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
         return mItems.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.imageViewForeignLanguage?.setImageResource(mItems[position].image)
-        holder?.textViewForeignLanguage?.text = mItems[position].language.languageName
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_language, parent, false)
         val viewHolder = LanguageAdapter.ViewHolder(view)
         view.setOnClickListener({ mListener?.onLanguageClick(mItems[viewHolder.adapterPosition].language) })
         return viewHolder
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+        holder?.imageViewForeignLanguage?.setImageResource(mItems[position].image)
+        holder?.textViewForeignLanguage?.text = mItems[position].language.languageName
     }
 
 
