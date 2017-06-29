@@ -31,7 +31,7 @@ class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<Categ
     override fun onBindViewHolder(holder: ViewHolder?, position: Int)
     {
         holder?.image?.setImageResource(mItems[position].category.image)
-        holder?.text?.text = mItems[position].category.categoryName
+        holder?.text?.setText(mItems[position].category.categoryName)
     }
 
     fun setOnCategoryClickListener(listener: OnCategoryClickListener)

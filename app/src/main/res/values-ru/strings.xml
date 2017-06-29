@@ -10,4 +10,11 @@
     <string name="phrases">фразы</string>
     <string name="favorites">избранное</string>
     <string name="search">поиск</string>
+    <string name="category_soft_landing">Мягкая посадка</string>
+    <string name="category_conversation">Разговор</string>
+    <string name="category_questions">Вопросов</string>
+    <string name="category_numbers">Чисел</string>
+    <string name="category_clock">Часы</string>
+    <string name="category_colors">Цвета</string>
+    <string name="category_transportation">Транспорт</string>
 </resources>
