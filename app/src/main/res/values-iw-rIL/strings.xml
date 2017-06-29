@@ -10,4 +10,11 @@
     <string name="favorites">מועדפים</string>
     <string name="search">חיפוש</string>
     <string name="phrases">ביטויים</string>
+    <string name="category_soft_landing">נחיתה רכה</string>
+    <string name="category_conversation">שיחה</string>
+    <string name="category_questions">שאלות</string>
+    <string name="category_numbers">מספרים</string>
+    <string name="category_clock">שעון</string>
+    <string name="category_colors">צבעים</string>
+    <string name="category_transportation">תחבורה</string>
 </resources>

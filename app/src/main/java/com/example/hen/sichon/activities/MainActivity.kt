@@ -13,6 +13,7 @@ import com.example.hen.sichon.adapters.LanguageAdapter
 import com.example.hen.sichon.adapters.LanguageSelectorAdapter
 import com.example.hen.sichon.decorators.LanguageItemDecorator
 import com.example.hen.sichon.enums.Language
+import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.LanguageModel
 import com.example.hen.sichon.models.SelectLanguageModel
 import com.example.hen.sichon.utils.AppUtils
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        PersistenceManager.init(applicationContext)
         initLanguageFlagsRecyclerView()
     }
 

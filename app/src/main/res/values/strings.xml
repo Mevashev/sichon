@@ -9,6 +9,13 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_title_select_language">Select your language</string>
     <string name="language">language</string>
+    <string name="category_soft_landing">Soft Landing</string>
+    <string name="category_conversation">Conversation</string>
+    <string name="category_questions">Questions</string>
+    <string name="category_numbers">Numbers</string>
+    <string name="category_clock">Clock</string>
+    <string name="category_colors">Colors</string>
+    <string name="category_transportation">Transportation</string>
 
 
     <string-array name="soft_landing">
