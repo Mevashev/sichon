@@ -1,6 +1,7 @@
 package com.example.hen.sichon.activities
 
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -20,7 +21,8 @@ import com.example.hen.sichon.utils.DialogUtil
 class MainActivity : AppCompatActivity() {
     private val SPAN_COUNT = 1
     var mLanguageSelectorAdapter: LanguageSelectorAdapter? = null
-    var mSelectedLanguageId: Language? = null
+    var mSelectedLanguage: Language? = null
+    var mAdapter: LanguageAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +41,12 @@ class MainActivity : AppCompatActivity() {
             R.id.language -> {
                 val view = createLanguageRecyclerView()
                 val dialog = DialogUtil.createTwoButtonsConfirmationDialog(this, R.string.dialog_title_select_language, R.string.dialog_done, R.string.dialog_cancel,
-                        MaterialDialog.SingleButtonCallback({ _, _ -> mSelectedLanguageId = mLanguageSelectorAdapter?.getSelectedLanguageId() }),
+                        MaterialDialog.SingleButtonCallback({ _, _ ->
+                            mSelectedLanguage = mLanguageSelectorAdapter?.getSelectedLanguage()
+                            AppUtils.setDefaultLocale(this@MainActivity, mSelectedLanguage?.locale)
+                            mAdapter?.removeThisItem(mSelectedLanguage)
+
+                        }),
                         MaterialDialog.SingleButtonCallback({ dialog, _ -> dialog.dismiss() }))
                 dialog.customView(view, true)
                 dialog.show()
@@ -56,18 +63,17 @@ class MainActivity : AppCompatActivity() {
         items.add(LanguageModel(R.drawable.israel, Language.HEBREW))
         items.add(LanguageModel(R.drawable.russia, Language.RUSSIAN))
 
-        val adapter = LanguageAdapter(items)
-        adapter.setLanguageClickListener(object : LanguageAdapter.OnLanguageClickListener
-        {
-            override fun onLanguageClick(selectedLanguage: Language)
-            {
-                AppUtils.setDefaultLocale(this@MainActivity, selectedLanguage.locale)
+        mAdapter = LanguageAdapter(items)
+        mAdapter?.setLanguageClickListener(object : LanguageAdapter.OnLanguageClickListener {
+            override fun onLanguageClick(selectedLanguage: Language) {
                 startActivity(SichonActivity.getIntent(this@MainActivity))
             }
         })
-        foreignLanguageRecyclerView.adapter = adapter
-        foreignLanguageRecyclerView.setHasFixedSize(true)
-        foreignLanguageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
+        languageRecyclerView.adapter = mAdapter
+        languageRecyclerView.setHasFixedSize(true)
+        languageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
+        mAdapter?.removeThisItem(Language.ENGLISH)
+
     }
 
     private fun createLanguageRecyclerView(): View {

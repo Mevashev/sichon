@@ -59,11 +59,10 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
     }
 
 
-    public fun getSelectedLanguageId(): Language {
-        for (item in mItems) {
-            if (item.isSelected)
-                return item.language
-        }
-        return Language.ENGLISH
+    fun getSelectedLanguage(): Language {
+        return mItems
+                .firstOrNull { it.isSelected }
+                ?.language
+                ?: Language.ENGLISH
     }
 }
