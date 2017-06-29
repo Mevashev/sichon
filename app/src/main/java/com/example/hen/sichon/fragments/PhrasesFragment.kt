@@ -13,6 +13,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.hen.sichon.R
 import com.example.hen.sichon.adapters.PhrasesAdapter
+import com.example.hen.sichon.enums.Language
+import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.PhraseModel
 import com.example.hen.sichon.utils.AppUtils
 import java.util.*
@@ -45,14 +47,15 @@ class PhrasesFragment : Fragment()
 
         val categoryId = arguments.getInt(ARG_CATEGORY_ID)
 
-        // Todo : get locals from shared preferences
-        val hebRes = AppUtils.getLocalizedResources(activity.baseContext, Locale("iw", "IL"))
-        val hebPhrases = hebRes.getStringArray(categoryId)
+        val fromLanguage = Language.getLanguageFromString(PersistenceManager.getTranslateFromLanguage())
+        val fromRes = AppUtils.getLocalizedResources(activity.baseContext,fromLanguage.locale)
+        val fromPhrases = fromRes.getStringArray(categoryId)
 
-        val ruRes = AppUtils.getLocalizedResources(activity.baseContext, Locale("ru"))
-        val ruPhrases = ruRes.getStringArray(categoryId)
+        val toLanguage = Language.getLanguageFromString(PersistenceManager.getTranslteToLanguage())
+        val toRes = AppUtils.getLocalizedResources(activity.baseContext, toLanguage.locale)
+        val toPhrases = toRes.getStringArray(categoryId)
 
-        val phrases = hebPhrases.zip(ruPhrases!!, { hebPhrase, ruPhrase -> PhraseModel(hebPhrase, ruPhrase) })
+        val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
         val phrasesAdapter = PhrasesAdapter(phrases)
 
         phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener

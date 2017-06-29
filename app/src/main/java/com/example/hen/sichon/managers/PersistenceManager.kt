@@ -23,12 +23,12 @@ object PersistenceManager
         mContext = context.applicationContext
     }
 
-    fun setString(key: String, value: String?)
+    private fun setString(key: String, value: String?)
     {
         putValue(key, value)
     }
 
-    fun getString(key: String): String?
+   private fun getString(key: String): String?
     {
         if (mSharedPreferences?.contains(key) ?: false)
         {
@@ -43,22 +43,22 @@ object PersistenceManager
         mSharedPreferences?.edit()?.putString(key, value)?.commit()
     }
 
-    fun saveTransltoToLanaguage(translateTo: String)
+    fun saveTranslteToLanguage(translateTo: String)
     {
         setString(PREF_TRANSLATE_TO_LANGUAGE, translateTo)
     }
 
-    fun getTransltoToLanaguage(): String?
+    fun getTranslteToLanguage(): String?
     {
         return getString(PREF_TRANSLATE_TO_LANGUAGE)
     }
 
-    fun saveTransltoFromLanaguage(translateFrom: String)
+    fun saveTranslateFromLanguage(translateFrom: String)
     {
         setString(PREF_TRANSLATE_FROM_LANGUAGE, translateFrom)
     }
 
-    fun getTransltoFromLanaguage(): String?
+    fun getTranslateFromLanguage(): String?
     {
         return getString(PREF_TRANSLATE_FROM_LANGUAGE)
     }

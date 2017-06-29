@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.TextUtils
 import android.view.MenuItem
 import android.view.View
 import com.afollestad.materialdialogs.MaterialDialog
@@ -47,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                             mSelectedLanguage = mLanguageSelectorAdapter?.getSelectedLanguage()
                             AppUtils.setDefaultLocale(this@MainActivity, mSelectedLanguage?.locale)
                             mAdapter?.removeThisItem(mSelectedLanguage)
+                            PersistenceManager.saveTranslateFromLanguage(mSelectedLanguage.toString())
 
                         }),
                         MaterialDialog.SingleButtonCallback({ dialog, _ -> dialog.dismiss() }))
@@ -68,14 +70,21 @@ class MainActivity : AppCompatActivity() {
         mAdapter = LanguageAdapter(items)
         mAdapter?.setLanguageClickListener(object : LanguageAdapter.OnLanguageClickListener {
             override fun onLanguageClick(selectedLanguage: Language) {
+                PersistenceManager.saveTranslteToLanguage(selectedLanguage.toString())
                 startActivity(SichonActivity.getIntent(this@MainActivity))
             }
         })
         languageRecyclerView.adapter = mAdapter
         languageRecyclerView.setHasFixedSize(true)
         languageRecyclerView.addItemDecoration(LanguageItemDecorator(SPAN_COUNT))
-        mAdapter?.removeThisItem(Language.ENGLISH)
-
+        val selectedLanguage = PersistenceManager.getTranslateFromLanguage()
+        if (!TextUtils.isEmpty(selectedLanguage)) {
+            val language = Language.getLanguageFromString(selectedLanguage)
+            AppUtils.setDefaultLocale(this, language.locale)
+            mAdapter?.removeThisItem(language)
+        } else {
+            mAdapter?.removeThisItem(Language.ENGLISH)
+        }
     }
 
     private fun createLanguageRecyclerView(): View {
