@@ -14,6 +14,37 @@
     <string name="category_colors">Цвета</string>
     <string name="category_transportation">Транспорт</string>
 
+    <string-array name="soft_landing">
+        <item>שלום</item>
+        <item>ברוכים הבאים</item>
+        <item>בוקר טוב</item>
+        <item>צהריים טובים</item>
+        <item>לילה טוב</item>
+        <item>להתראות</item>
+        <item>כן</item>
+        <item>לא</item>
+        <item>בבקשה</item>
+        <item>תודה רבה</item>
+        <item>אני לא מבין</item>
+        <item>לא יודע</item>
+        <item>סליחה</item>
+        <item>על לא דבר</item>
+        <item>אתה מדבר אנגלית?</item>
+        <item>אני צריך להגיע לכתובת הזאת</item>
+        <item>כמה זה עולה?</item>
+        <item>אני מצטער</item>
+        <item>חבל</item>
+        <item>אני רוצה</item>
+        <item>מה זה?</item>
+        <item>מה השעה?</item>
+        <item>איפה נמצא ה…?</item>
+        <item>איך אני מגיע לכתובת הזאת?</item>
+        <item>כמובן</item>
+        <item>איפה יש תחנת מוניות?</item>
+        <item>אין על מה</item>
+        <item>יש לי שאלה</item>
+    </string-array>
+
     <string-array name="transportation">
         <item>Как вы добираетесь…?</item>
         <item>У тебя есть карта?</item>
@@ -48,4 +79,63 @@
         <item>Смешивание цветов</item>
         <item>Твердый цвет</item>
     </string-array>
+
+    <string-array name="clock">
+        <item>Час</item>
+        <item>Минут</item>
+        <item>Секунда</item>
+        <item>Пара минут</item>
+        <item>Подожди минуту</item>
+        <item>Который сейчас час?</item>
+        <item>Время…</item>
+        <item>Четыре часа</item>
+        <item>Это шесть пятнадцать</item>
+        <item>Это семь тридцать</item>
+        <item>Это от четверти до восьми</item>
+    </string-array>
+
+    <string-array name="conversation">
+        <item>מה שלומך?</item>
+        <item>מה שמך?</item>
+        <item>נעים להכיר</item>
+        <item>מה חדש?</item>
+        <item>שמי…</item>
+        <item>סליחה, אני לא מבין</item>
+        <item>אני מ…</item>
+        <item>אני רוצה להפגש איתך</item>
+        <item>איפה אנחנו יכולים להפגש?</item>
+        <item>בוא נפגש ביום שני</item>
+        <item>בוא נפגש בשעה…</item>
+        <item>מתי נוכל להפגש?</item>
+        <item>היכן נוכל להפגש?</item>
+        <item>נפגש שוב?</item>
+        <item>מה הכתובת שלך?</item>
+        <item>הכתובת שלי היא…</item>
+        <item>תרשום את האי-מייל שלי</item>
+        <item>היה ממש כיף</item>
+        <item>אני מודה לך</item>
+        <item>אני מטייל</item>
+        <item>אפשר להזמין אותך לשתות משהו?</item>
+        <item>אני בן 27</item>
+        <item>מה מספר הטלפון שלך?</item>
+        <item>באיזה מלון אתה מתאכסן?</item>
+        <item>מה היא העיר הבאה במסלול שלך?</item>
+        <item>אנחנו ממשיכים מפה ל…</item>
+        <item>יש מקום שאתה ממליץ עליו?</item>
+        <item>אני ממליץ לך על…</item>
+        <item>תוכל לעבור לקחת אותי, בבקשה?</item>
+        <item>יש לך אש?</item>
+        <item>לצאת לפאב</item>
+        <item>אני אתגעגע אליך</item>
+        <item>יש לך תוכנית כלשהי לערב?</item>
+        <item>עד מתי אתה נשאר?</item>
+        <item>אני אוהב אותך</item>
+        <item>היית רוצה לבוא לארוחת ערב?</item>
+        <item>אתה מוזמן אלינו לארוחת ערב</item>
+        <item>במה אתה עובד?</item>
+        <item>אני עובד ב…</item>
+        <item>סליחה על האיחור</item>
+        <item>אני מודה לך על…</item>
+    </string-array>
+
 </resources>

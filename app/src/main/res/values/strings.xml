@@ -19,11 +19,94 @@
 
 
     <string-array name="soft_landing">
+        <item>Hello</item>
+        <item>Welcome</item>
+        <item>Good morning</item>
+        <item>Good afternoon</item>
+        <item>Good night</item>
+        <item>Goodbye</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Please</item>
+        <item>Thank you</item>
+        <item>I don\'t understand</item>
+        <item>I don\'t know</item>
+        <item>Excuse me</item>
+        <item>You\'re welcome</item>
+        <item>Do you speak English?</item>
+        <item>I need to get that address</item>
+        <item>How much is it cost?</item>
+        <item>I'm sorry</item>
+        <item>Too bad</item>
+        <item>I want</item>
+        <item>What is?</item>
+        <item>What time is it?</item>
+        <item>Where is the…?</item>
+        <item>How do i get to this address?</item>
+        <item>Of course</item>
+        <item>Where is a taxi station?</item>
+        <item>You\'re welcome</item>
+        <item>I have a question</item>
     </string-array>
+
     <string-array name="clock">
+        <item>Hour</item>
+        <item>Minute</item>
+        <item>Second</item>
+        <item>Two minutes</item>
+        <item>Wait a minute</item>
+        <item>What time is it?</item>
+        <item>The time is…</item>
+        <item>It\'s four o\'clock</item>
+        <item>It\'s six-fifteen</item>
+        <item>It\'s seven-thirty</item>
+        <item>It\'s a quarter to eight</item>
     </string-array>
+
     <string-array name="conversation">
+        <item>מה שלומך?</item>
+        <item>מה שמך?</item>
+        <item>נעים להכיר</item>
+        <item>מה חדש?</item>
+        <item>שמי…</item>
+        <item>סליחה, אני לא מבין</item>
+        <item>אני מ…</item>
+        <item>אני רוצה להפגש איתך</item>
+        <item>איפה אנחנו יכולים להפגש?</item>
+        <item>בוא נפגש ביום שני</item>
+        <item>בוא נפגש בשעה…</item>
+        <item>מתי נוכל להפגש?</item>
+        <item>היכן נוכל להפגש?</item>
+        <item>נפגש שוב?</item>
+        <item>מה הכתובת שלך?</item>
+        <item>הכתובת שלי היא…</item>
+        <item>תרשום את האי-מייל שלי</item>
+        <item>היה ממש כיף</item>
+        <item>אני מודה לך</item>
+        <item>אני מטייל</item>
+        <item>אפשר להזמין אותך לשתות משהו?</item>
+        <item>אני בן 27</item>
+        <item>מה מספר הטלפון שלך?</item>
+        <item>באיזה מלון אתה מתאכסן?</item>
+        <item>מה היא העיר הבאה במסלול שלך?</item>
+        <item>אנחנו ממשיכים מפה ל…</item>
+        <item>יש מקום שאתה ממליץ עליו?</item>
+        <item>אני ממליץ לך על…</item>
+        <item>תוכל לעבור לקחת אותי, בבקשה?</item>
+        <item>יש לך אש?</item>
+        <item>לצאת לפאב</item>
+        <item>אני אתגעגע אליך</item>
+        <item>יש לך תוכנית כלשהי לערב?</item>
+        <item>עד מתי אתה נשאר?</item>
+        <item>אני אוהב אותך</item>
+        <item>היית רוצה לבוא לארוחת ערב?</item>
+        <item>אתה מוזמן אלינו לארוחת ערב</item>
+        <item>במה אתה עובד?</item>
+        <item>אני עובד ב…</item>
+        <item>סליחה על האיחור</item>
+        <item>אני מודה לך על…</item>
     </string-array>
+
     <string-array name="questions">
     </string-array>
     <string-array name="numbers">
