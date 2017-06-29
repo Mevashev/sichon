@@ -46,5 +46,15 @@ class AppUtils
                 })
             }.value
         }
+
+        fun setDefaultLocale(context: Context, locale: Locale)
+        {
+            Locale.setDefault(locale)
+
+            val config = context.resources.configuration
+            config.setLocale(locale)
+            context.createConfigurationContext(config)
+            context.resources.updateConfiguration(config, context.resources.displayMetrics)
+        }
     }
 }

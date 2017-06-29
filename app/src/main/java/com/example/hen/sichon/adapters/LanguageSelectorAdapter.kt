@@ -25,11 +25,6 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
         return mItems.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.language?.text = mItems[position].language.languageName
-        holder?.radioButton?.isChecked = mItems[position].isSelected
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_radio_button_language, parent, false)
         val viewHolder = LanguageSelectorAdapter.ViewHolder(view)
@@ -42,6 +37,11 @@ class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerV
             mListenerSelector?.onLanguageSelectedClick(mItems[viewHolder.adapterPosition].language)
         }
         return viewHolder
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+        holder?.language?.text = mItems[position].language.languageName
+        holder?.radioButton?.isChecked = mItems[position].isSelected
     }
 
 

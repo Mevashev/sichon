@@ -55,7 +55,7 @@ class CategoryFragment : Fragment()
         val category6 = CategoryModel(Category.CLOCK)
         val category7 = CategoryModel(Category.TRANSPORTATION)
 
-        val categories = listOf(category1 ,category2, category3, category4, category5, category6, category7)
+        val categories = listOf(category1, category2, category3, category4, category5, category6, category7)
         val categoryAdapter = CategoriesAdapter(categories)
         categoryAdapter.setOnCategoryClickListener(object : CategoriesAdapter.OnCategoryClickListener
         {
