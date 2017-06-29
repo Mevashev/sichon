@@ -15,7 +15,7 @@ import com.example.hen.sichon.models.LanguageModel
  */
 class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<LanguageAdapter.ViewHolder>() {
 
-    private var mListener: LanguageAdapter.OnForeignLanguageClickListener? = null
+    private var mListener: LanguageAdapter.OnLanguageClickListener? = null
     private val mItems = items
 
     override fun getItemCount(): Int {
@@ -30,7 +30,7 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_language, parent, false)
         val viewHolder = LanguageAdapter.ViewHolder(view)
-        view.setOnClickListener({ mListener?.onForeignLanguageClick(mItems[viewHolder.adapterPosition].language) })
+        view.setOnClickListener({ mListener?.onLanguageClick(mItems[viewHolder.adapterPosition].language) })
         return viewHolder
     }
 
@@ -40,11 +40,11 @@ class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<La
         val textViewForeignLanguage = view.findViewById(R.id.text_view_language) as TextView
     }
 
-    fun setForeignLanguageClickListener(listener: OnForeignLanguageClickListener) {
+    fun setLanguageClickListener(listener: OnLanguageClickListener) {
         mListener = listener
     }
 
-    interface OnForeignLanguageClickListener {
-        fun onForeignLanguageClick(selectedLanguage: LanguageModel.Language)
+    interface OnLanguageClickListener {
+        fun onLanguageClick(selectedLanguage: LanguageModel.Language)
     }
 }

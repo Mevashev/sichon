@@ -1,0 +1,60 @@
+package com.example.hen.sichon.adapters
+
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.TextView
+import com.example.hen.sichon.R
+import com.example.hen.sichon.models.LanguageModel
+import com.example.hen.sichon.models.SelectLanguageModel
+import java.util.*
+
+/**
+ * Created by slava-android on 6/28/2017.
+ * Falcore Ltd.
+ */
+class LanguageSelectorAdapter(items: ArrayList<SelectLanguageModel>) : RecyclerView.Adapter<LanguageSelectorAdapter.ViewHolder>() {
+
+    private var mListenerSelector: LanguageSelectorAdapter.OnLanguageSelectorClickListener? = null
+    private val mItems = items
+
+
+    override fun getItemCount(): Int {
+        return mItems.size
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+        holder?.language?.text = mItems[position].language.toString()
+        holder?.redioButton?.isChecked = mItems[position].isSelected
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_languages, parent, false)
+        val viewHolder = LanguageSelectorAdapter.ViewHolder(view)
+        view.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                mItems.forEach({it -> it.isSelected = false})
+                mItems[viewHolder.adapterPosition].isSelected = true
+                notifyDataSetChanged()
+                mListenerSelector?.onLanguageSelectedClick(mItems[viewHolder.adapterPosition].language)
+            }
+        })
+        return viewHolder
+    }
+
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val redioButton = view.findViewById(R.id.radio_button) as RadioButton
+        val language = view.findViewById(R.id.language) as TextView
+    }
+
+    fun setForeignLanguageClickListener(listenerSelector: OnLanguageSelectorClickListener) {
+        mListenerSelector = listenerSelector
+    }
+
+    interface OnLanguageSelectorClickListener {
+        fun onLanguageSelectedClick(selectedLanguage: LanguageModel.Language)
+    }
+}
