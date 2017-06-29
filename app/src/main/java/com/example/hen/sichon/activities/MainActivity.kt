@@ -15,6 +15,7 @@ import com.example.hen.sichon.decorators.LanguageItemDecorator
 import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.models.LanguageModel
 import com.example.hen.sichon.models.SelectLanguageModel
+import com.example.hen.sichon.utils.DialogUtil
 
 class MainActivity : AppCompatActivity()
 {
@@ -41,7 +42,11 @@ class MainActivity : AppCompatActivity()
             R.id.language ->
             {
                 val view = createLanguageRecyclerView()
-                MaterialDialog.Builder(this).cancelable(false).positiveText(getString(R.string.dialog_done)).negativeText(getString(R.string.dialog_cancel)).title(getString(R.string.dialog_title_select_language)).customView(view, true).show()
+                val dialog = DialogUtil.createTwoButtonsConfirmationDialog(this,R.string.dialog_title_select_language, R.string.dialog_done, R.string.dialog_cancel,
+                        MaterialDialog.SingleButtonCallback({dialog, which -> print(1) }),
+                        MaterialDialog.SingleButtonCallback({dialog, _ -> dialog.dismiss() }))
+                dialog.customView(view, true)
+                dialog.show()
             }
         }
         return true
