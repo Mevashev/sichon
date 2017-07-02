@@ -39,6 +39,7 @@ class PhrasesFragment : Fragment()
         return inflater?.inflate(R.layout.fragment_phrases, container, false)
     }
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
@@ -47,7 +48,7 @@ class PhrasesFragment : Fragment()
         val categoryId = arguments.getInt(ARG_CATEGORY_ID)
 
         val fromLanguage = Language.getLanguageFromString(PersistenceManager.getTranslateFromLanguage())
-        val fromRes = AppUtils.getLocalizedResources(activity.baseContext,fromLanguage.locale)
+        val fromRes = AppUtils.getLocalizedResources(activity.baseContext, fromLanguage.locale)
         val fromPhrases = fromRes.getStringArray(categoryId)
 
         val toLanguage = Language.getLanguageFromString(PersistenceManager.getTranslteToLanguage())
@@ -57,13 +58,7 @@ class PhrasesFragment : Fragment()
         val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
         val phrasesAdapter = PhrasesAdapter(phrases)
 
-        phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener
-        {
-            @RequiresApi(Build.VERSION_CODES.LOLLIPOP) override fun onPhraseClick(textToSpeech: String)
-            {
-                AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
-            }
-        })
+        phrasesAdapter.setOnPhraseClickListener({ textToSpeech -> AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech) })
 
         phrasesRecyclerView.layoutManager = LinearLayoutManager(activity.baseContext, LinearLayout.VERTICAL, false)
         phrasesRecyclerView.adapter = phrasesAdapter

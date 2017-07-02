@@ -57,13 +57,7 @@ class CategoryFragment : Fragment()
 
         val categories = listOf(category1, category2, category3, category4, category5, category6, category7)
         val categoryAdapter = CategoriesAdapter(categories)
-        categoryAdapter.setOnCategoryClickListener(object : CategoriesAdapter.OnCategoryClickListener
-        {
-            override fun onCategoryClick(@ArrayRes category: Int)
-            {
-                mFragmentNavigationListener?.replaceFragment(true, PhrasesFragment.getInstance(category))
-            }
-        })
+        categoryAdapter.setOnCategoryClickListener({ category -> mFragmentNavigationListener?.replaceFragment(true, PhrasesFragment.getInstance(category)) })
 
         categoryRecyclerView.adapter = categoryAdapter
     }

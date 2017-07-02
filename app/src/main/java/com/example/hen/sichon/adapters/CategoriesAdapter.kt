@@ -1,6 +1,5 @@
 package com.example.hen.sichon.adapters
 
-import android.support.annotation.ArrayRes
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,7 @@ import com.example.hen.sichon.models.CategoryModel
 class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()
 {
     private val mItems = items
-    private var mListener: CategoriesAdapter.OnCategoryClickListener? = null
+    private var mListener: ((Int) -> Unit)? = null
 
     override fun getItemCount(): Int
     {
@@ -24,7 +23,7 @@ class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<Categ
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_category, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({mListener?.onCategoryClick(mItems[viewHolder.adapterPosition].category.categoryId)})
+        view.setOnClickListener({mListener?.invoke(mItems[viewHolder.adapterPosition].category.categoryId)})
         return viewHolder
     }
 
@@ -34,15 +33,11 @@ class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<Categ
         holder?.text?.setText(mItems[position].category.categoryName)
     }
 
-    fun setOnCategoryClickListener(listener: OnCategoryClickListener)
+    fun setOnCategoryClickListener(listener: (Int) -> Unit)
     {
         mListener = listener
     }
 
-    interface OnCategoryClickListener
-    {
-        fun onCategoryClick(@ArrayRes category : Int)
-    }
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
     {
         val image = view.findViewById(R.id.image_view_category) as ImageView

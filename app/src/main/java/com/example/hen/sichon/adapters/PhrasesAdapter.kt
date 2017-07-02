@@ -11,7 +11,7 @@ import com.example.hen.sichon.models.PhraseModel
 class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAdapter.ViewHolder>()
 {
     private val mItems = items
-    private var mListener: OnPhraseClickListener? = null
+    private var mListener: ((String) -> Unit)? = null
 
     override fun getItemCount(): Int
     {
@@ -22,7 +22,7 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_phrase, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo) })
+        view.setOnClickListener({ mListener?.invoke(mItems[viewHolder.adapterPosition].translateTo) })
         return viewHolder
     }
 
@@ -32,14 +32,9 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
         holder?.translateTo?.text = mItems[position].translateTo
     }
 
-    fun setOnPhraseClickListener(listener: OnPhraseClickListener)
+    fun setOnPhraseClickListener(listener: (String) -> Unit)
     {
         mListener = listener
-    }
-
-    interface OnPhraseClickListener
-    {
-        fun onPhraseClick(textToSpeech: String)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)

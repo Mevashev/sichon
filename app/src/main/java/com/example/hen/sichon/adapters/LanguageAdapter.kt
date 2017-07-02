@@ -14,51 +14,58 @@ import com.example.hen.sichon.models.LanguageModel
  * Created by slava-android on 6/28/2017.
  * Falcore Ltd.
  */
-class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<LanguageAdapter.ViewHolder>() {
+class LanguageAdapter(items: ArrayList<LanguageModel>) : RecyclerView.Adapter<LanguageAdapter.ViewHolder>()
+{
 
-    private var mListener: LanguageAdapter.OnLanguageClickListener? = null
+    private var mListener: ((Language) -> Unit)? = null
     private val mItems: ArrayList<LanguageModel>? = ArrayList<LanguageModel>()
     private val mSubItems = items
 
-    init {
+    init
+    {
         mItems?.addAll(mSubItems)
     }
 
-    override fun getItemCount(): Int {
+    override fun getItemCount(): Int
+    {
         return mSubItems.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder
+    {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_language, parent, false)
         val viewHolder = LanguageAdapter.ViewHolder(view)
-        view.setOnClickListener({ mListener?.onLanguageClick(mSubItems[viewHolder.adapterPosition].language) })
+        view.setOnClickListener({ mListener?.invoke(mSubItems[viewHolder.adapterPosition].language) })
         return viewHolder
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder?, position: Int)
+    {
         holder?.imageViewForeignLanguage?.setImageResource(mSubItems[position].image)
         holder?.textViewForeignLanguage?.text = mSubItems[position].language.languageName
     }
 
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
+    {
         val imageViewForeignLanguage = view.findViewById(R.id.image_view_language) as ImageView
         val textViewForeignLanguage = view.findViewById(R.id.text_view_language) as TextView
     }
 
-    fun setLanguageClickListener(listener: OnLanguageClickListener) {
+    fun setLanguageClickListener(listener: (Language) -> Unit)
+    {
         mListener = listener
     }
 
-    interface OnLanguageClickListener {
-        fun onLanguageClick(selectedLanguage: Language)
-    }
-
-    fun removeThisItem(language: Language?) {
+    fun removeThisItem(language: Language?)
+    {
         mSubItems.clear()
-        if (mItems != null) {
-            for (item in mItems) {
-                if (item.language != language) {
+        if (mItems != null)
+        {
+            for (item in mItems)
+            {
+                if (item.language != language)
+                {
                     mSubItems.add(item)
                 }
             }
