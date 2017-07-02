@@ -91,10 +91,26 @@ class MainActivity : AppCompatActivity() {
         val view = View.inflate(this, R.layout.view_languages_selector, null)
         val selectLanguageRecyclerView = view.findViewById(R.id.recycler_view_languages) as RecyclerView
         val data = ArrayList<SelectLanguageModel>()
-        data.add(SelectLanguageModel(Language.ENGLISH, true))
+
+        val selectedLanguage = PersistenceManager.getTranslateFromLanguage()
+        mLanguageSelectorAdapter = LanguageSelectorAdapter(data)
+        var language: Language? = null
+        if (!TextUtils.isEmpty(selectedLanguage)) {
+            language = Language.getLanguageFromString(selectedLanguage)
+        } else {
+            language = Language.ENGLISH
+        }
+        data.add(SelectLanguageModel(Language.ENGLISH, false))
         data.add(SelectLanguageModel(Language.HEBREW, false))
         data.add(SelectLanguageModel(Language.RUSSIAN, false))
-        mLanguageSelectorAdapter = LanguageSelectorAdapter(data)
+
+        for (dataItem in data) {
+            if(dataItem.language == language)
+            {
+                dataItem.isSelected = true
+                break
+            }
+        }
         selectLanguageRecyclerView.adapter = mLanguageSelectorAdapter
         selectLanguageRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         selectLanguageRecyclerView.setHasFixedSize(true)
