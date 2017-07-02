@@ -10,7 +10,6 @@ object PersistenceManager
     private val PREF_TRANSLATE_FROM_LANGUAGE = "pref.TRANSLATE_FROM_LANGUAGE"
 
     private var mSharedPreferences: SharedPreferences? = null
-    private var mContext: Context? = null
         get()
         {
             return field ?: throw IllegalStateException("PersistenceManager has not been initialized.")
@@ -20,7 +19,6 @@ object PersistenceManager
     fun init(context: Context)
     {
         mSharedPreferences = context.getSharedPreferences("user_preferences", Context.MODE_PRIVATE)
-        mContext = context.applicationContext
     }
 
     private fun setString(key: String, value: String?)
