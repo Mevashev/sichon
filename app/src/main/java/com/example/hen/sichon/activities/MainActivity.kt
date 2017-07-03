@@ -20,6 +20,7 @@ import com.example.hen.sichon.models.LanguageModel
 import com.example.hen.sichon.models.SelectLanguageModel
 import com.example.hen.sichon.utils.AppUtils
 import com.example.hen.sichon.utils.DialogUtil
+import com.facebook.stetho.Stetho
 
 class MainActivity : AppCompatActivity()
 {
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main)
         PersistenceManager.init(applicationContext)
         DataBaseInit.initDb(applicationContext)
+        Stetho.initializeWithDefaults(applicationContext)
         initLanguageFlagsRecyclerView()
     }
 

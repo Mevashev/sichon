@@ -10,8 +10,7 @@ object DataBaseInit
 
     fun initDb(context: Context)
     {
-        mDb = Room.databaseBuilder(context,
-                AppDatabase::class.java, "database-name").build()
+        mDb = Room.databaseBuilder(context, AppDatabase::class.java, "database-name").allowMainThreadQueries().build()
         mFavoriteDao = mDb.favoriteDao()
     }
 
@@ -20,10 +19,10 @@ object DataBaseInit
         return mFavoriteDao.isFavorite(phrase)
     }
 
-    fun insertFavorite()
+    fun insertFavorite(phrase: String)
     {
-        val favorite = Favorite(phrase = "dog")
-        mFavoriteDao.insertPhrase(favorite)
+        val favorite = Favorite(phrase = phrase)
+        mFavoriteDao.insertFavorite(favorite)
     }
 
 

@@ -7,10 +7,10 @@ import android.arch.persistence.room.Query
 
 @Dao
 interface FavoriteDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPhrase(favorite: Favorite)
+    @Insert
+    fun insertFavorite(favorite: Favorite)
 
 
-    @Query("SELECT * FROM favorite WHERE favorite_phrase LIKE :phrase")
+    @Query("SELECT * FROM favorite WHERE favorite_phrase LIKE :arg0")
     fun isFavorite(phrase: String): Favorite
 }

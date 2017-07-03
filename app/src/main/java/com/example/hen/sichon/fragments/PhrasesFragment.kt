@@ -60,7 +60,7 @@ class PhrasesFragment : Fragment() {
             }
 
             override fun onFavoriteClick(favoritePhrase: String) {
-                DataBaseInit.insertFavorite()
+                DataBaseInit.insertFavorite(favoritePhrase)
             }
         })
 
