@@ -1,8 +1,7 @@
 package com.example.hen.sichon.database
 
-import android.arch.lifecycle.LiveData
-import android.content.Context
 import android.arch.persistence.room.Room
+import android.content.Context
 
 object DataBaseInit
 {
@@ -16,9 +15,16 @@ object DataBaseInit
         mFavoriteDao = mDb.favoriteDao()
     }
 
-    fun isFavorite(phrase: String): LiveData<Favorite>
+    fun isFavorite(phrase: String): Favorite
     {
         return mFavoriteDao.isFavorite(phrase)
     }
+
+    fun insertFavorite()
+    {
+        val favorite = Favorite(phrase = "dog")
+        mFavoriteDao.insertPhrase(favorite)
+    }
+
 
 }

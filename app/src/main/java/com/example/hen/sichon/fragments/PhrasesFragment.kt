@@ -19,14 +19,11 @@ import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.PhraseModel
 import com.example.hen.sichon.utils.AppUtils
 
-class PhrasesFragment : Fragment()
-{
-    companion object
-    {
+class PhrasesFragment : Fragment() {
+    companion object {
         private val ARG_CATEGORY_ID = "arg.CATEGORY_NAME"
 
-        fun getInstance(@ArrayRes categoryId: Int): PhrasesFragment
-        {
+        fun getInstance(@ArrayRes categoryId: Int): PhrasesFragment {
             val fragment = PhrasesFragment()
             val arguments = Bundle()
             arguments.putInt(ARG_CATEGORY_ID, categoryId)
@@ -35,14 +32,12 @@ class PhrasesFragment : Fragment()
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_phrases, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?)
-    {
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val phrasesRecyclerView = view?.findViewById(R.id.recycler_view_phrases) as RecyclerView
 
@@ -60,17 +55,12 @@ class PhrasesFragment : Fragment()
         val phrasesAdapter = PhrasesAdapter(phrases)
 
         phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener {
-            override fun onPhraseClick(textToSpeech: String)
-            {
+            override fun onPhraseClick(textToSpeech: String) {
                 AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
             }
 
-            override fun onFavoriteClick(favoritePhrase: String)
-            {
-                if (DataBaseInit.isFavorite(favoritePhrase))
-                {
-                    phrasesAdapter.setFavorite(position)
-                }
+            override fun onFavoriteClick(favoritePhrase: String) {
+                DataBaseInit.insertFavorite()
             }
         })
 
