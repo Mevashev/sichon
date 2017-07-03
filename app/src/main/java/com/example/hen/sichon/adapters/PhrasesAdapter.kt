@@ -11,7 +11,7 @@ import com.example.hen.sichon.models.PhraseModel
 class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAdapter.ViewHolder>()
 {
     private val mItems = items
-    private var mListener: ((String) -> Unit)? = null
+    private var mListener: OnPhraseClickListener? = null
 
     override fun getItemCount(): Int
     {
@@ -22,7 +22,8 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_phrase, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({ mListener?.invoke(mItems[viewHolder.adapterPosition].translateTo) })
+        view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo) })
+        viewHolder.favorite.setOnClickListener({ mListener?.onFavoriteClick( mItems[viewHolder.adapterPosition].translateFrom) })
         return viewHolder
     }
 
@@ -32,7 +33,7 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
         holder?.translateTo?.text = mItems[position].translateTo
     }
 
-    fun setOnPhraseClickListener(listener: (String) -> Unit)
+    fun setOnPhraseClickListener(listener: OnPhraseClickListener)
     {
         mListener = listener
     }
@@ -41,5 +42,12 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     {
         val translateFrom = view.findViewById(R.id.text_view_translate_from) as TextView
         val translateTo = view.findViewById(R.id.text_view_translate_to) as TextView
+        val favorite: View = view.findViewById(R.id.view_favorite)
+    }
+
+    interface OnPhraseClickListener
+    {
+        fun onPhraseClick(textToSpeech: String)
+        fun onFavoriteClick(favoritePhrase: String)
     }
 }

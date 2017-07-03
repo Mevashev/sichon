@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.hen.sichon.R
 import com.example.hen.sichon.adapters.PhrasesAdapter
+import com.example.hen.sichon.database.DataBaseInit
 import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.PhraseModel
@@ -58,7 +59,20 @@ class PhrasesFragment : Fragment()
         val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
         val phrasesAdapter = PhrasesAdapter(phrases)
 
-        phrasesAdapter.setOnPhraseClickListener({ textToSpeech -> AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech) })
+        phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener {
+            override fun onPhraseClick(textToSpeech: String)
+            {
+                AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
+            }
+
+            override fun onFavoriteClick(favoritePhrase: String)
+            {
+                if (DataBaseInit.isFavorite(favoritePhrase))
+                {
+                    phrasesAdapter.setFavorite(position)
+                }
+            }
+        })
 
         phrasesRecyclerView.layoutManager = LinearLayoutManager(activity.baseContext, LinearLayout.VERTICAL, false)
         phrasesRecyclerView.adapter = phrasesAdapter

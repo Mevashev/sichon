@@ -40,4 +40,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_translate_to" />
 
+    <View
+        android:id="@+id/view_favorite"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="@+id/text_view_translate_from"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_translate_to"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_star_border"/>
+
 </android.support.constraint.ConstraintLayout>
