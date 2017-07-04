@@ -2,7 +2,6 @@ package com.example.hen.sichon.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.support.annotation.ArrayRes
 import android.support.v4.app.Fragment
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
@@ -13,7 +12,6 @@ import com.example.hen.sichon.R
 import com.example.hen.sichon.activities.interfaces.FragmentNavigation
 import com.example.hen.sichon.adapters.CategoriesAdapter
 import com.example.hen.sichon.enums.Category
-import com.example.hen.sichon.models.CategoryModel
 
 class CategoryFragment : Fragment()
 {
@@ -47,16 +45,7 @@ class CategoryFragment : Fragment()
         val categoryRecyclerView = view?.findViewById(R.id.recycler_view_categories) as RecyclerView
         categoryRecyclerView.layoutManager = StaggeredGridLayoutManager(RECYCLER_VIEW_SPAN_COUNT, StaggeredGridLayoutManager.VERTICAL)
 
-        val category1 = CategoryModel(Category.SOFT_LANDING)
-        val category2 = CategoryModel(Category.CONVERSATION)
-        val category3 = CategoryModel(Category.QUESTIONS)
-        val category4 = CategoryModel(Category.COLORS)
-        val category5 = CategoryModel(Category.NUMBERS)
-        val category6 = CategoryModel(Category.CLOCK)
-        val category7 = CategoryModel(Category.TRANSPORTATION)
-
-        val categories = listOf(category1, category2, category3, category4, category5, category6, category7)
-        val categoryAdapter = CategoriesAdapter(categories)
+        val categoryAdapter = CategoriesAdapter(Category.values())
         categoryAdapter.setOnCategoryClickListener({ category -> mFragmentNavigationListener?.replaceFragment(true, PhrasesFragment.getInstance(category)) })
 
         categoryRecyclerView.adapter = categoryAdapter

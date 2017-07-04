@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         PersistenceManager.init(applicationContext)
-        DataBaseInit.initDb(applicationContext)
         Stetho.initializeWithDefaults(applicationContext)
         initLanguageFlagsRecyclerView()
     }

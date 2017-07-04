@@ -9,13 +9,27 @@
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_title_select_language">Select your language</string>
     <string name="language">language</string>
+
     <string name="category_soft_landing">Soft Landing</string>
     <string name="category_conversation">Conversation</string>
     <string name="category_questions">Questions</string>
     <string name="category_numbers">Numbers</string>
     <string name="category_clock">Clock</string>
     <string name="category_colors">Colors</string>
-    <string name="category_transportation">Transportation</string>
+    <string name="category_transportation_buses">Transportation-Buses</string>
+    <string name="category_transportation_flights">Transportation-Flights</string>
+    <string name="category_transportation_taxis">Transportation-Taxis</string>
+    <string name="category_transportation_car_rental">Transportation-Car Rental</string>
+    <string name="category_forecast">Forecast</string>
+    <string name="category_trips_and_backpacking">Trips &amp; Backpacking</string>
+    <string name="category_lodging">Lodging</string>
+    <string name="category_money_and_arrangements">Money &amp; Arrangements</string>
+    <string name="category_health">Health</string>
+    <string name="category_food_and_entertainment">Food &amp; Entertainment</string>
+    <string name="category_emergency_situations_and_problems">Emergency Situations &amp; Problems</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_communication">Communication</string>
+    <string name="category_clothes_and_laundry">Clothes &amp; Laundry</string>
 
 
     <string-array name="soft_landing">
@@ -64,52 +78,124 @@
     </string-array>
 
     <string-array name="conversation">
-        <item>מה שלומך?</item>
-        <item>מה שמך?</item>
-        <item>נעים להכיר</item>
-        <item>מה חדש?</item>
-        <item>שמי…</item>
-        <item>סליחה, אני לא מבין</item>
-        <item>אני מ…</item>
-        <item>אני רוצה להפגש איתך</item>
-        <item>איפה אנחנו יכולים להפגש?</item>
-        <item>בוא נפגש ביום שני</item>
-        <item>בוא נפגש בשעה…</item>
-        <item>מתי נוכל להפגש?</item>
-        <item>היכן נוכל להפגש?</item>
-        <item>נפגש שוב?</item>
-        <item>מה הכתובת שלך?</item>
-        <item>הכתובת שלי היא…</item>
-        <item>תרשום את האי-מייל שלי</item>
-        <item>היה ממש כיף</item>
-        <item>אני מודה לך</item>
-        <item>אני מטייל</item>
-        <item>אפשר להזמין אותך לשתות משהו?</item>
-        <item>אני בן 27</item>
-        <item>מה מספר הטלפון שלך?</item>
-        <item>באיזה מלון אתה מתאכסן?</item>
-        <item>מה היא העיר הבאה במסלול שלך?</item>
-        <item>אנחנו ממשיכים מפה ל…</item>
-        <item>יש מקום שאתה ממליץ עליו?</item>
-        <item>אני ממליץ לך על…</item>
-        <item>תוכל לעבור לקחת אותי, בבקשה?</item>
-        <item>יש לך אש?</item>
-        <item>לצאת לפאב</item>
-        <item>אני אתגעגע אליך</item>
-        <item>יש לך תוכנית כלשהי לערב?</item>
-        <item>עד מתי אתה נשאר?</item>
-        <item>אני אוהב אותך</item>
-        <item>היית רוצה לבוא לארוחת ערב?</item>
-        <item>אתה מוזמן אלינו לארוחת ערב</item>
-        <item>במה אתה עובד?</item>
-        <item>אני עובד ב…</item>
-        <item>סליחה על האיחור</item>
-        <item>אני מודה לך על…</item>
+        <item>How are you?</item>
+        <item>What\'s your name?</item>
+        <item>Nice to meet you</item>
+        <item>What\'s New?</item>
+        <item>My name is…</item>
+        <item>Unfortunately I do not understand</item>
+        <item>I\'m from…</item>
+        <item>I want to meet you</item>
+        <item>Where can we meet?</item>
+        <item>Let\'s meet on Monday</item>
+        <item>Let\'s meet in…</item>
+        <item>When can we meet?</item>
+        <item>Where can we meet?</item>
+        <item>To meet again?</item>
+        <item>What\'s your address?</item>
+        <item>My address…</item>
+        <item>Write to my e-mail address</item>
+        <item>It was very funny</item>
+        <item>Thank you</item>
+        <item>I am traveling</item>
+        <item>Can I buy you a drink?</item>
+        <item>I\'m 27 years old</item>
+        <item>What\'s your phone number?</item>
+        <item>Which hotel did you stay at?</item>
+        <item>What is the next city on the route?</item>
+        <item>We are still on the map…</item>
+        <item>There is a place you recommend it?</item>
+        <item>I call you…</item>
+        <item>Can you go and get me, please?</item>
+        <item>Do you have the light?</item>
+        <item>Go out to the pub</item>
+        <item>I\'ll miss you</item>
+        <item>Was there any program?</item>
+        <item>How long will you be staying?</item>
+        <item>I love you</item>
+        <item>Do you want to come for dinner?</item>
+        <item>You invited us to dinner</item>
+        <item>What are you doing?</item>
+        <item>I work in…</item>
+        <item>sorry for delay</item>
+        <item>I thank you for…</item>
     </string-array>
 
     <string-array name="questions">
+        <item>What?</item>
+        <item>What is this?</item>
+        <item>Who?</item>
+        <item>Who is this?</item>
+        <item>Who are you?</item>
+        <item>Whose?</item>
+        <item>Whose number is that?</item>
+        <item>With whom are you going?</item>
+        <item>When?</item>
+        <item>When does the bus arrive?</item>
+        <item>When is the ride?</item>
+        <item>When are you going?</item>
+        <item>When will you return?</item>
+        <item>How many?</item>
+        <item>How much is it cost?</item>
+        <item>How many are you?</item>
+        <item>How?</item>
+        <item>How do you say?</item>
+        <item>Which?</item>
+        <item>Which company is more recommended?</item>
+        <item>Why?</item>
+        <item>Why is it so expensive?</item>
+        <item>Where?</item>
+        <item>Where is the nearest station?</item>
+        <item>Where are you going?</item>
+        <item>How do you feel?</item>
     </string-array>
+
     <string-array name="numbers">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+        <item>Eleven</item>
+        <item>Twelve</item>
+        <item>Thirteen</item>
+        <item>Fourteen</item>
+        <item>Fifteen</item>
+        <item>Sixteen</item>
+        <item>Seventeen</item>
+        <item>Eighteen</item>
+        <item>Nineteen</item>
+        <item>Twenty</item>
+        <item>Thirty</item>
+        <item>Forty</item>
+        <item>Fifty</item>
+        <item>Sixty</item>
+        <item>Seventy</item>
+        <item>Eighty</item>
+        <item>Ninety</item>
+        <item>Hundred</item>
+        <item>Two hundred</item>
+        <item>Three hundred</item>
+        <item>Four hundred</item>
+        <item>Five hundred</item>
+        <item>Six hundred</item>
+        <item>Seven hundred</item>
+        <item>Eight hundred</item>
+        <item>Nine hundred</item>
+        <item>Thousand</item>
+        <item>Two thousand</item>
+        <item>Ten thousand</item>
+        <item>One hundred thousand</item>
+        <item>One million</item>
+        <item>Half</item>
+        <item>A third</item>
+        <item>Quarter</item>
+        <item>Percent</item>
     </string-array>
     <string-array name="colors">
         <item>Color</item>
@@ -140,8 +226,25 @@
         <item>Color Mixing</item>
         <item>Solid color</item>
     </string-array>
-    <string-array name="transportation">
-        <item>How do you get to…?</item>
-        <item>Do you have a map?</item>
+
+    <string-array name="transportation_bus">
+        <item>Buses</item>
+        <item>Direct Nonstop</item>
+        <item>How much does the ticket cost?</item>
+        <item>Where can I buy a ticket?</item>
+        <item>Excuse me, is this bus stops in…?</item>
+        <item>Can you tell me where to get off?</item>
+        <item>How late are the buses?</item>
+        <item>When does the last bus pass?</item>
+        <item>Which line should I take?</item>
+        <item>Good trip</item>
+        <item>Drive carefully</item>
+        <item>Which bus goes to town?</item>
+        <item>Which bus goes…?</item>
+        <item>How long is the trip?</item>
+        <item>Is there an armchair bed / half bed?</item>
+        <item>When the bus leaves?</item>
+        <item>I would like four tickets to luxury seats</item>
+        <item>How long does it take to get there?</item>
     </string-array>
 </resources>

@@ -12,42 +12,34 @@
     <string name="category_numbers">Чисел</string>
     <string name="category_clock">Часы</string>
     <string name="category_colors">Цвета</string>
-    <string name="category_transportation">Транспорт</string>
+    <string name="category_transportation_buses">Транспорт-Автобусы</string>
+    <string name="category_transportation_flights">Транспортно-Рейс</string>
+    <string name="category_transportation_taxis">Транспорт-такси</string>
+    <string name="category_transportation_car_rental">Прокат автомобилей Транспортно-</string>
+    <string name="category_forecast">Погода</string>
+    <string name="category_trips_and_backpacking">Туризм и кемпинг</string>
+    <string name="category_lodging">Жилье</string>
+    <string name="category_money_and_arrangements">Деньги и механизмы</string>
+    <string name="category_health">Здоровье</string>
+    <string name="category_food_and_entertainment">Питание и развлечения</string>
+    <string name="category_emergency_situations_and_problems">Чрезвычайные ситуации и проблемы</string>
+    <string name="category_shopping">Покупка</string>
+    <string name="category_communication">Связь</string>
+    <string name="category_clothes_and_laundry">Стирка одежды</string>
 
-    <string-array name="soft_landing">
-        <item>שלום</item>
-        <item>ברוכים הבאים</item>
-        <item>בוקר טוב</item>
-        <item>צהריים טובים</item>
-        <item>לילה טוב</item>
-        <item>להתראות</item>
-        <item>כן</item>
-        <item>לא</item>
-        <item>בבקשה</item>
-        <item>תודה רבה</item>
-        <item>אני לא מבין</item>
-        <item>לא יודע</item>
-        <item>סליחה</item>
-        <item>על לא דבר</item>
-        <item>אתה מדבר אנגלית?</item>
-        <item>אני צריך להגיע לכתובת הזאת</item>
-        <item>כמה זה עולה?</item>
-        <item>אני מצטער</item>
-        <item>חבל</item>
-        <item>אני רוצה</item>
-        <item>מה זה?</item>
-        <item>מה השעה?</item>
-        <item>איפה נמצא ה…?</item>
-        <item>איך אני מגיע לכתובת הזאת?</item>
-        <item>כמובן</item>
-        <item>איפה יש תחנת מוניות?</item>
-        <item>אין על מה</item>
-        <item>יש לי שאלה</item>
-    </string-array>
 
-    <string-array name="transportation">
-        <item>Как вы добираетесь…?</item>
-        <item>У тебя есть карта?</item>
+    <string-array name="clock">
+        <item>Час</item>
+        <item>Минут</item>
+        <item>Секунда</item>
+        <item>Пара минут</item>
+        <item>Подожди минуту</item>
+        <item>Который сейчас час?</item>
+        <item>Время…</item>
+        <item>Четыре часа</item>
+        <item>Это шесть пятнадцать</item>
+        <item>Это семь тридцать</item>
+        <item>Это от четверти до восьми</item>
     </string-array>
 
     <string-array name="colors">
@@ -80,62 +72,178 @@
         <item>Твердый цвет</item>
     </string-array>
 
-    <string-array name="clock">
-        <item>Час</item>
-        <item>Минут</item>
-        <item>Секунда</item>
-        <item>Пара минут</item>
-        <item>Подожди минуту</item>
-        <item>Который сейчас час?</item>
-        <item>Время…</item>
-        <item>Четыре часа</item>
-        <item>Это шесть пятнадцать</item>
-        <item>Это семь тридцать</item>
-        <item>Это от четверти до восьми</item>
+    <string-array name="conversation">
+        <item>Как вы?</item>
+        <item>Как тебя зовут?</item>
+        <item>Приятно познакомиться</item>
+        <item>Что нового?</item>
+        <item>Меня зовут…</item>
+        <item>К сожалению, я не понимаю</item>
+        <item>Я м…</item>
+        <item>Я хочу встретиться с вами</item>
+        <item>Где мы можем встретиться?</item>
+        <item>Давайте встретимся в понедельник</item>
+        <item>Давайте встретимся в…</item>
+        <item>Когда мы можем встретиться?</item>
+        <item>Где мы можем встретиться?</item>
+        <item>Встретиться еще раз?</item>
+        <item>Что ваш адрес?</item>
+        <item>Мой адрес…</item>
+        <item>Написать в мой адрес электронной почты</item>
+        <item>Это было очень весело</item>
+        <item>Я благодарю вас</item>
+        <item>Я путешествую</item>
+        <item>Могу ли я купить тебе выпить?</item>
+        <item>Я 27 лет</item>
+        <item>Какой у вас номер телефона?</item>
+        <item>Какой отель вы остановились?</item>
+        <item>Какой следующий город на маршруте?</item>
+        <item>Мы по-прежнему на карте…</item>
+        <item>Существует место, вы рекомендуете его?</item>
+        <item>Я призываю вас…</item>
+        <item>Вы можете пойти и получить меня, пожалуйста?</item>
+        <item>У вас есть свет?</item>
+        <item>Выходите в паб</item>
+        <item>Я буду скучать по тебе</item>
+        <item>Был ли какая-либо программа предусматривает?</item>
+        <item>Как долго вы будете оставаться?</item>
+        <item>Я люблю тебя</item>
+        <item>Вы хотите, чтобы прийти на ужин?</item>
+        <item>Вы пригласили нас на ужин</item>
+        <item>Что вы делаете?</item>
+        <item>Я работаю в…</item>
+        <item>Извините за задержку</item>
+        <item>Я благодарю вас за…</item>
     </string-array>
 
-    <string-array name="conversation">
-        <item>מה שלומך?</item>
-        <item>מה שמך?</item>
-        <item>נעים להכיר</item>
-        <item>מה חדש?</item>
-        <item>שמי…</item>
-        <item>סליחה, אני לא מבין</item>
-        <item>אני מ…</item>
-        <item>אני רוצה להפגש איתך</item>
-        <item>איפה אנחנו יכולים להפגש?</item>
-        <item>בוא נפגש ביום שני</item>
-        <item>בוא נפגש בשעה…</item>
-        <item>מתי נוכל להפגש?</item>
-        <item>היכן נוכל להפגש?</item>
-        <item>נפגש שוב?</item>
-        <item>מה הכתובת שלך?</item>
-        <item>הכתובת שלי היא…</item>
-        <item>תרשום את האי-מייל שלי</item>
-        <item>היה ממש כיף</item>
-        <item>אני מודה לך</item>
-        <item>אני מטייל</item>
-        <item>אפשר להזמין אותך לשתות משהו?</item>
-        <item>אני בן 27</item>
-        <item>מה מספר הטלפון שלך?</item>
-        <item>באיזה מלון אתה מתאכסן?</item>
-        <item>מה היא העיר הבאה במסלול שלך?</item>
-        <item>אנחנו ממשיכים מפה ל…</item>
-        <item>יש מקום שאתה ממליץ עליו?</item>
-        <item>אני ממליץ לך על…</item>
-        <item>תוכל לעבור לקחת אותי, בבקשה?</item>
-        <item>יש לך אש?</item>
-        <item>לצאת לפאב</item>
-        <item>אני אתגעגע אליך</item>
-        <item>יש לך תוכנית כלשהי לערב?</item>
-        <item>עד מתי אתה נשאר?</item>
-        <item>אני אוהב אותך</item>
-        <item>היית רוצה לבוא לארוחת ערב?</item>
-        <item>אתה מוזמן אלינו לארוחת ערב</item>
-        <item>במה אתה עובד?</item>
-        <item>אני עובד ב…</item>
-        <item>סליחה על האיחור</item>
-        <item>אני מודה לך על…</item>
+    <string-array name="numbers">
+        <item>Один</item>
+        <item>Два</item>
+        <item>Три</item>
+        <item>Четыре</item>
+        <item>Пять</item>
+        <item>Шесть</item>
+        <item>Семь</item>
+        <item>Восемь</item>
+        <item>Девять</item>
+        <item>Десять</item>
+        <item>Одиннадцать</item>
+        <item>Двенадцать</item>
+        <item>Тринадцать</item>
+        <item>Четырнадцать</item>
+        <item>Пятнадцать</item>
+        <item>Шестнадцать</item>
+        <item>Семнадцать</item>
+        <item>Восемнадцать</item>
+        <item>Девятнадцать</item>
+        <item>Двадцать</item>
+        <item>Тридцать</item>
+        <item>Сорок</item>
+        <item>Пятьдесят</item>
+        <item>Шестьдесят</item>
+        <item>Семьдесят</item>
+        <item>Восемьдесят</item>
+        <item>Девяносто</item>
+        <item>Сто</item>
+        <item>Двести</item>
+        <item>Триста</item>
+        <item>Четыреста</item>
+        <item>Пятьсот</item>
+        <item>Шестьсот</item>
+        <item>Семьсот</item>
+        <item>Восемьсот</item>
+        <item>Девятьсот</item>
+        <item>Тысяча</item>
+        <item>Две тысячи</item>
+        <item>Десять тысяч</item>
+        <item>Сто тысяч</item>
+        <item>Один Квитанции</item>
+        <item>Половина</item>
+        <item>Третий</item>
+        <item>Четверть</item>
+        <item>Процентов</item>
+    </string-array>
+
+    <string-array name="questions">
+        <item>Какие?</item>
+        <item>Что это?</item>
+        <item>Кто?</item>
+        <item>Кто это?</item>
+        <item>Кто ты?</item>
+        <item>Чья?</item>
+        <item>Чей это номер?</item>
+        <item>С кем вы собираетесь?</item>
+        <item>Когда?</item>
+        <item>Когда прибывает автобус?</item>
+        <item>Когда ехать?</item>
+        <item>Когда вы собираетесь?</item>
+        <item>Когда ты вернешься?</item>
+        <item>Сколько?</item>
+        <item>Сколько это стоит?</item>
+        <item>Сколько вас?</item>
+        <item>Как?</item>
+        <item>Как ты скажешь?</item>
+        <item>Который?</item>
+        <item>Какая компания более рекомендуется?</item>
+        <item>Зачем?</item>
+        <item>Почему это так дорого?</item>
+        <item>Где?</item>
+        <item>Где ближайшая станция?</item>
+        <item>Куда ты идешь?</item>
+        <item>Как вы себя чувствуете?</item>
+    </string-array>
+
+    <string-array name="soft_landing">
+
+        <item>Мир</item>
+        <item>Желанный</item>
+        <item>Доброе утро</item>
+        <item>Добрый день</item>
+        <item>Спокойная ночь</item>
+        <item>До свидания</item>
+        <item>Да</item>
+        <item>Нет</item>
+        <item>Пожалуйста</item>
+        <item>Большое спасибо</item>
+        <item>Не понимаю</item>
+        <item>Я не знаю</item>
+        <item>Извините</item>
+        <item>О В настоящее</item>
+        <item>Вы говорите по-английски?</item>
+        <item>Мне нужно, чтобы получить этот адрес</item>
+        <item>Что это стоит?</item>
+        <item>Я сожалею</item>
+        <item>Жалость</item>
+        <item>Я хочу</item>
+        <item>Что это?</item>
+        <item>Сколько времени?</item>
+        <item>Где …?</item>
+        <item>Как я могу получить по этому адресу?</item>
+        <item>Курс</item>
+        <item>Там, где есть стенд такси?</item>
+        <item>Там нет ничего</item>
+        <item>У меня есть вопрос</item>
+    </string-array>
+
+    <string-array name="transportation_bus">
+        <item>Автобусы</item>
+        <item>Прямая Nonstop</item>
+        <item>Сколько стоит билет?</item>
+        <item>Где купить билет?</item>
+        <item>К сожалению, этот автобус доходит до …?</item>
+        <item>Вы можете сказать мне, где выйти?</item>
+        <item>Как поздно автобусы?</item>
+        <item>Когда последний автобус проходит?</item>
+        <item>По какой линии я доеду?</item>
+        <item>Хорошая поездка</item>
+        <item>Привод тщательно</item>
+        <item>Какой автобус идет в город?</item>
+        <item>Какой автобус идет …?</item>
+        <item>Как долго поездка?</item>
+        <item>Существует кровать кресла / полуторная кровать?</item>
+        <item>Когда покинуть автобус?</item>
+        <item>Я хотел бы четыре билета люкс мест</item>
+        <item>Как долго туда попасть?</item>
     </string-array>
 
 </resources>

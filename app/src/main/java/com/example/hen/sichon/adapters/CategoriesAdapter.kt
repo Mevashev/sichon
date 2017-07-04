@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.hen.sichon.R
-import com.example.hen.sichon.models.CategoryModel
+import com.example.hen.sichon.enums.Category
 
-class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()
+class CategoriesAdapter(items: Array<Category>) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()
 {
     private val mItems = items
     private var mListener: ((Int) -> Unit)? = null
@@ -23,14 +23,14 @@ class CategoriesAdapter(items: List<CategoryModel>) : RecyclerView.Adapter<Categ
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_category, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({mListener?.invoke(mItems[viewHolder.adapterPosition].category.categoryId)})
+        view.setOnClickListener({mListener?.invoke(mItems[viewHolder.adapterPosition].categoryId)})
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int)
     {
-        holder?.image?.setImageResource(mItems[position].category.image)
-        holder?.text?.setText(mItems[position].category.categoryName)
+        holder?.image?.setImageResource(mItems[position].image)
+        holder?.text?.setText(mItems[position].categoryName)
     }
 
     fun setOnCategoryClickListener(listener: (Int) -> Unit)

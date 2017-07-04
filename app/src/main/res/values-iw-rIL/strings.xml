@@ -5,50 +5,27 @@
     <string name="favorites">מועדפים</string>
     <string name="search">חיפוש</string>
     <string name="phrases">ביטויים</string>
+
     <string name="category_soft_landing">נחיתה רכה</string>
     <string name="category_conversation">שיחה</string>
     <string name="category_questions">שאלות</string>
     <string name="category_numbers">מספרים</string>
     <string name="category_clock">שעון</string>
     <string name="category_colors">צבעים</string>
-    <string name="category_transportation">תחבורה</string>
-
-
-    <string-array name="transportation">
-        <item>איך מגיעים ל…?</item>
-        <item>יש לכם מפה?</item>
-    </string-array>
-
-    <string-array name="soft_landing">
-        <item>שלום</item>
-        <item>ברוכים הבאים</item>
-        <item>בוקר טוב</item>
-        <item>צהריים טובים</item>
-        <item>לילה טוב</item>
-        <item>להתראות</item>
-        <item>כן</item>
-        <item>לא</item>
-        <item>בבקשה</item>
-        <item>תודה רבה</item>
-        <item>אני לא מבין</item>
-        <item>לא יודע</item>
-        <item>סליחה</item>
-        <item>על לא דבר</item>
-        <item>אתה מדבר אנגלית?</item>
-        <item>אני צריך להגיע לכתובת הזאת</item>
-        <item>כמה זה עולה?</item>
-        <item>אני מצטער</item>
-        <item>חבל</item>
-        <item>אני רוצה</item>
-        <item>מה זה?</item>
-        <item>מה השעה?</item>
-        <item>איפה נמצא ה…?</item>
-        <item>איך אני מגיע לכתובת הזאת?</item>
-        <item>כמובן</item>
-        <item>איפה יש תחנת מוניות?</item>
-        <item>אין על מה</item>
-        <item>יש לי שאלה</item>
-    </string-array>
+    <string name="category_transportation_buses">אוטובוסים</string>
+    <string name="category_transportation_flights">טיסות</string>
+    <string name="category_transportation_taxis">מוניות</string>
+    <string name="category_transportation_car_rental">השכרת רכב</string>
+    <string name="category_forecast">מזג האוויר</string>
+    <string name="category_trips_and_backpacking">טיולים</string>
+    <string name="category_lodging">לינה</string>
+    <string name="category_money_and_arrangements">פיננסי</string>
+    <string name="category_health">בריאות</string>
+    <string name="category_food_and_entertainment">סגנון חיים</string>
+    <string name="category_emergency_situations_and_problems">מצבי חירום</string>
+    <string name="category_shopping">קניות</string>
+    <string name="category_communication">תקשורת</string>
+    <string name="category_clothes_and_laundry">ביגוד</string>
 
 
     <string-array name="clock">
@@ -108,9 +85,83 @@
         <item>סליחה על האיחור</item>
         <item>אני מודה לך על…</item>
     </string-array>
+
+
     <string-array name="questions">
+        <item>מה?</item>
+        <item>מה זה?</item>
+        <item>מי?</item>
+        <item>מי זה?</item>
+        <item>מי אתה?</item>
+        <item>של מי?</item>
+        <item>של מי המספר הזה?</item>
+        <item>עם מי אתה הולך?</item>
+        <item>מתי?</item>
+        <item>מתי מגיע האוטובוס?</item>
+        <item>מתי יוצאת ההסעה?</item>
+        <item>מתי אתם הולכים?</item>
+        <item>מתי תחזרו?</item>
+        <item>כמה?</item>
+        <item>כמה זה עולה?</item>
+        <item>כמה אתם?</item>
+        <item>איך?</item>
+        <item>איך אומרים?</item>
+        <item>איזה?</item>
+        <item>איזו חברה מומלצת יותר?</item>
+        <item>מדוע?</item>
+        <item>למה זה כל כך יקר?</item>
+        <item>איפה?</item>
+        <item>איפה יש תחנה קרובה?</item>
+        <item>לאן אתה הולך?</item>
+        <item>איך אתה מרגיש?</item>
     </string-array>
+
     <string-array name="numbers">
+        <item>אחד</item>
+        <item>שתיים</item>
+        <item>שלוש</item>
+        <item>ארבע</item>
+        <item>חמש</item>
+        <item>שש</item>
+        <item>שבע</item>
+        <item>שמונה</item>
+        <item>תשע</item>
+        <item>עשר</item>
+        <item>אחד-עשרה</item>
+        <item>שתיים-עשרה</item>
+        <item>שלוש-עשרה</item>
+        <item>ארבע-עשרה</item>
+        <item>חמש-עשרה</item>
+        <item>שש-עשרה</item>
+        <item>שבע-עשרה</item>
+        <item>שמונה-עשרה</item>
+        <item>תשע-עשרה</item>
+        <item>עשרים</item>
+        <item>שלושים</item>
+        <item>ארבעים</item>
+        <item>חמישים</item>
+        <item>שישים</item>
+        <item>שבעים</item>
+        <item>שמונים</item>
+        <item>תשעים</item>
+        <item>מאה</item>
+        <item>מאתיים</item>
+        <item>שלוש-מאות</item>
+        <item>ארבע-מאות</item>
+        <item>חמש-מאות</item>
+        <item>שש-מאות</item>
+        <item>שבע-מאות</item>
+        <item>שמונה-מאות</item>
+        <item>תשע-מאות</item>
+        <item>אלף</item>
+        <item>אלפיים</item>
+        <item>עשרת-אלפים</item>
+        <item>מאה-אלף</item>
+        <item>מיליון</item>
+        <item>חצי</item>
+        <item>שליש</item>
+        <item>רבע</item>
+        <item>אחוז</item>
     </string-array>
     <string-array name="colors">
         <item>צבע</item>
@@ -140,5 +191,291 @@
         <item>גוונים של…</item>
         <item>ערבוב צבעים</item>
         <item>צבע אחיד</item>
+    </string-array>
+
+    <string-array name="soft_landing">
+        <item>שלום</item>
+        <item>ברוכים הבאים</item>
+        <item>בוקר טוב</item>
+        <item>צהריים טובים</item>
+        <item>לילה טוב</item>
+        <item>להתראות</item>
+        <item>כן</item>
+        <item>לא</item>
+        <item>בבקשה</item>
+        <item>תודה רבה</item>
+        <item>אני לא מבין</item>
+        <item>לא יודע</item>
+        <item>סליחה</item>
+        <item>על לא דבר</item>
+        <item>אתה מדבר אנגלית?</item>
+        <item>אני צריך להגיע לכתובת הזאת</item>
+        <item>כמה זה עולה?</item>
+        <item>אני מצטער</item>
+        <item>חבל</item>
+        <item>אני רוצה</item>
+        <item>מה זה?</item>
+        <item>מה השעה?</item>
+        <item>איפה נמצא ה…?</item>
+        <item>איך אני מגיע לכתובת הזאת?</item>
+        <item>כמובן</item>
+        <item>איפה יש תחנת מוניות?</item>
+        <item>אין על מה</item>
+        <item>יש לי שאלה</item>
+    </string-array>
+
+    <string-array name="transportation_bus">
+        <item>אוטובוסים</item>
+        <item>ישיר ללא עצירות</item>
+        <item>כמה עולה כרטיס?</item>
+        <item>היכן קונים כרטיס?</item>
+        <item>סליחה, האוטובוס הזה מגיע ל…?</item>
+        <item>תוכל להודיע לי היכן לרדת?</item>
+        <item>עד איזו שעה יש אוטובוסים?</item>
+        <item>מתי עובר האוטובוס האחרון?</item>
+        <item>איזה קו עליי לקחת?</item>
+        <item>נסיעה טובה</item>
+        <item>סע בזהירות</item>
+        <item>איזה אוטובוס מגיע למרכז העיר?</item>
+        <item>איזה אוטובוס מגיע ל…?</item>
+        <item>כמה זמן הנסיעה?</item>
+        <item>יש מושב מיטה / חצי מיטה?</item>
+        <item>מתי האוטובוס יוצא?</item>
+        <item>אני רוצה ארבעה כרטיסים במושבים צמודים</item>
+        <item>עוד כמה זמן מגיעים?</item>
+    </string-array>
+    
+    <string-array name="clothing">
+        <item>היכן יש כאן מכבסה קרובה?</item>
+        <item>באילו ימים אתם פתוחים?</item>
+        <item>מתי הכביסה תהיה מוכנה?</item>
+        <item>מה המחיר לקילו?</item>
+        <item>אני רוצה למסור את הבגדים לכביסה</item>
+        <item>יש אפשרות שזה יהיה מוכן להיום?</item>
+        <item>אני רוצה שיגהצו לי את החולצה הזאת?</item>
+        <item>איפה יש חנות בגדים?</item>
+        <item>אני צריך מידה גדולה יותר</item>
+        <item>אני צריך מידה קטנה יותר</item>
+        <item>אני צריך לקנות בגדים בשבילי</item>
+        <item>יש לכם לבנים?</item>
+        <item>אני רוצה לקנות גרביים</item>
+        <item>אני רוצה לקצר את המכנסיים</item>
+        <item>אתם עושים תיקונים?</item>
+        <item>איפה אפשר לקנות ביגוד איכותי ובזול?</item>
+        <item>איפה יש מראה?</item>
+        <item>אני מחפש חולצה</item>
+        <item>מאיזה בד עשוי הבגד?</item>
+        <item>היכן יש חנות נעליים?</item>
+        <item>אני צריך ערכת תפירה</item>
+        <item>אני יכול לגזור את זה עם מספריים?</item>
+        <item>את יכולה להוסיף לי רקמה לחולצה?</item>
+        <item>יש לי חור בחולצה שצריך לתפור</item>
+    </string-array>
+
+    <string-array name="communication">
+        <item>אני מעוניין להתקשר לישראל</item>
+        <item>כמה עולה כרטיס חיוג?</item>
+        <item>אני מעוניין לשלוח פקס</item>
+        <item>כמה עולה דקת שיחה?</item>
+        <item>זה המספר שלי בישראל</item>
+        <item>תתקשר אליי</item>
+        <item>איך מחייגים?</item>
+        <item>יש רעש בקו</item>
+        <item>לכמה דקות יספיק כרטיס החיוג הזה?</item>
+        <item>איפה אפשר לקנות כרטיס חיוג?</item>
+        <item>זה עובד רק בטלפונים של חברת…</item>
+        <item>יש לכם ספר טלפונים</item>
+        <item>אני צריך את הטלפון של…</item>
+        <item>ניתקו לי את השיחה</item>
+        <item>טעית במספר</item>
+        <item>שלוחה 234, בבקשה</item>
+        <item>לא עונים</item>
+        <item>שלום, אפשר לקבל בבקשה את…</item>
+        <item>מי רוצה לדבר איתו?</item>
+        <item>הוא/היא לא נמצא/נמצאת</item>
+        <item>מה מספר הטלפון שלך?</item>
+        <item>מהו אזור החיוג של העיר?</item>
+        <item>כמה עולה שיחה ל…?</item>
+        <item>באיזו שעה להתקשר אלייך?</item>
+        <item>האם יש כאן אינטרנט אלחוטי?</item>
+        <item>הגיע אלייך המייל?</item>
+        <item>זו כתובת המייל שלי</item>
+        <item>אפשר לדבר עם…?</item>
+        <item>שיתקשר אליי למספר…</item>
+        <item>שלחתי הודעת טקסט</item>
+        <item>האם אתם יכולים לעשות לי צלצול השכמה?</item>
+        <item>התקשרתי, אין תשובה</item>
+        <item>איפה יש כאן אינטרנט קפה?</item>
+        <item>האם יש סקייפ במחשבים?</item>
+        <item>המחשב נתקע</item>
+        <item>האוזניות לא עובדות</item>
+        <item>אני לא שומע כלום</item>
+        <item>אתה שומע אותי?</item>
+        <item>האינטרנט התנתק</item>
+        <item>יש עברית במחשב?</item>
+        <item>יש לכם מדפסת?</item>
+        <item>כמה עולה להדפיס עמוד אחד?</item>
+    </string-array>
+
+    <string-array name="shopping">
+        <item>המחיר כולל…</item>
+        <item>אני רוצה את…</item>
+        <item>איפה אפשר לקנות עיתון?</item>
+        <item>היכן יש קיוסק?</item>
+        <item>אני רוצה עיתון באנגלית</item>
+        <item>אתם מוכרים ספרי לימוד בשפה ה…?</item>
+        <item>יש לכם מילון בשפה ה…?</item>
+        <item>איפה נמצאים ספרי ה…?</item>
+        <item>יש לכם מהדורה מעודכנת יותר?</item>
+        <item>יש לכם ספרים באנגלית?</item>
+        <item>אני צריך לערות קניות</item>
+        <item>היכן אני יכול לקנות…?</item>
+        <item>איפה מחלקת ה…?</item>
+        <item>איפה מחלקת קוסמטיקה?</item>
+        <item>איפה מחלקת חשמל?</item>
+        <item>מי יכול לעזור לי?</item>
+        <item>מי עובד פה?</item>
+        <item>אילו כרטיסי אשראי אתם מקבלים?</item>
+        <item>איך אפשר לשלם?</item>
+        <item>אני צריך קבלה</item>
+        <item>אני רוצה לקנות את העציץ הזה</item>
+        <item>איפה אפשר לקנות פרחים?</item>
+        <item>אני רוצה לקנות זר פרחים</item>
+        <item>כמה עולה משלוח?</item>
+        <item>זו הכתובת</item>
+        <item>יש לכם סרטים באנגלית?</item>
+        <item>איפה אני יכול לקנות סיגריות</item>
+        <item>כמה עולה קופסת סיגריות?</item>
+        <item>כמה עולה מצית?</item>
+        <item>איפה אפשר לפתח תמונות?</item>
+        <item>כמה עולה פיתוח?</item>
+        <item>יש לך מצלמות חד פעמיות?</item>
+        <item>יש סוללות למצלמה הזאת?</item>
+        <item>יש לך כרטיס זיכרון מתאים?</item>
+        <item>יש לך תמיסה לעדשות מגע?</item>
+        <item>אני צריך משקפיים חדשים</item>
+        <item>איפה אפשר לקנות חומרי ניקוי?</item>
+        <item>היכן אפשר למדוד?</item><item>היכן יש מספרה?</item>
+        <item>כמה עולה תספורת?</item>
+        <item>אני רוצה להסתפר</item>
+        <item>אני רוצה לצבוע את השיער</item>
+        <item>אני רוצה לעשות פן</item>
+        <item>אני רוצה לייבש את השיער</item>
+        <item>היכן יש סלון יופי?</item>
+        <item>לא קצר מדיי בבקשה</item>
+        <item>אתם עושים מניקור?</item>
+        <item>נראה יפה מאוד</item>
+        <item>אפשר לראות תמונות?</item>
+        <item>אפשר לראות ציורים יפים שיש לכם?</item>
+    </string-array>
+    
+    <string-array name="emercency">
+        <item>תקפו אותי</item>
+        <item>אני לא מוצא את המזוודות שלי</item>
+        <item>אני לא מוצא את התיקים שלי</item>
+        <item>גנבו לי את המצלמה</item>
+        <item>גנבו לי את כל הכסף וכרטיסי האשראי</item>
+        <item>שדדו אותי באוטובוס</item>
+        <item>פרצו לנו לבית</item>
+        <item>מישהו נפצע?</item>
+        <item>הייתה תאונה</item>
+        <item>אני רוצה להודיע על שוד</item>
+        <item>גנבו אותם מהחדר שלי</item>
+        <item>איבדתי את זה ב…</item>
+        <item>מספר הרישוי של המכונית הוא…</item>
+        <item>האם מצאת את המטען שלי?</item>
+        <item>השארתי את המפתח בתוך החדר</item>
+        <item>השארתי את המפתחות בתוך האוטו</item>
+        <item>בני הלך לאיבוד</item>
+        <item>ביתי הלכה לאיבוד</item>
+        <item>אני לא מוצא אותם</item>
+        <item>היא נחנקת!</item>
+        <item>אני לא יודע לשחות!</item>
+        <item>הוא לא יודע לשחות!</item>
+        <item>התקיפו אותי כשהלכתי ברחוב</item>
+        <item>התנגשתי במכונית שהייתה מולי</item>
+        <item>התנגשו בנו</item>
+        <item>מה הכתובת שלך?</item>
+        <item>היכן זה קרה?</item>
+        <item>את יכולה לנסות לאתר אותו?</item>
+        <item>פתוח 24 שעות ביממה</item>
+    </string-array>
+    
+    <string-array name="lifestyle">
+        <item>אנחנו רוצים שולחן לשלושה</item>
+        <item>יש מקום פנוי?</item>
+        <item>איפה יש מסעדה טובה באזור?</item>
+        <item>עד איזו שעה אתם פתוחים?</item>
+        <item>על מה אתה ממליץ?</item>
+        <item>אני ממליץ על…</item>
+        <item>יש מועדון טוב באיזור?</item>
+        <item>בלי גבינה, בבקשה</item>
+        <item>בלי חזיר, בבקשה</item>
+        <item>אנחנו מחפשים מסעדה כשרה</item>
+        <item>באילו ימים אתם פתוחים</item>
+        <item>ממש עמוס פה!</item>
+        <item>איזו מוזיקה טובה</item>
+        <item>אני רוצה להזמין…</item>
+        <item>אנחנו רוצים לשבת בחוץ</item>
+        <item>אנחנו רוצים לשבת באיזור ללא עישון</item>
+        <item>אפשר לעשן כאן?</item>
+        <item>אפשר חשבון בבקשה?</item>
+        <item>אתם מקבלים כרטיס אשראי?</item>
+        <item>אפשר תפריט בבקשה?</item>
+        <item>מה תרצו לשתות?</item>
+        <item>אני רוצה לשתות…</item>
+        <item>תרצו להזמין?</item>
+        <item>אילו משקאות אלכוהליים יש לכם?</item>
+        <item>כן, אנחנו מוכנים</item>
+        <item>היה לכם טעים?</item>
+        <item>האוכל היה גרוע</item>
+        <item>אפשר לקרוא למלצר?</item>
+        <item>אפשר לקבל מפית?</item>
+        <item>איפה השירותים?</item>
+        <item>יש לכם קיסמים?</item>
+        <item>אפשר כוס מים בבקשה?</item>
+        <item>יש כאן אוכל מעולה</item>
+        <item>מה יש לקינוח?</item>
+        <item>אפשר עוד לחם בבקשה?</item>
+        <item>יש לכם קטשופ?</item>
+        <item>אילו רטבים יש לכם?</item>
+        <item>הארוחה הייתה ממש טעימה!</item>
+        <item>אני רוצה מיץ פירות</item>
+        <item>אפשר לימונדה?</item>
+        <item>אפשר לחמם קצת את המנה?</item>
+        <item>תוכל להביא לנו עוד…</item>
+        <item>לא ביקשתי את זה</item>
+        <item>בתיאבון!</item>
+        <item>אפשר לקחת טייק אווי?</item>
+        <item>אפשר לארוז בקופסה?</item>
+        <item>יש שקית?</item>
+        <item>אפשר לקבל את הבשר עשוי היטב?</item>
+        <item>אפשר כוס עם קרח?</item>
+        <item>איפה יש באיזור בית קולנוע?</item>
+        <item>אני רוצה ללכת לסרט</item>
+        <item>מתי ההצגה האחרונה</item>
+        <item>אילו סרטים יש?</item>
+        <item>יש הופעה מומלצת?</item>
+        <item>מהיכן מתחיל התור?</item>
+        <item>צריך להזמין כרטיסים מראש</item>
+        <item>יש הנחות לסטודנטים?</item>
+        <item>כמה עולה הכניסה?</item>
+        <item>יש הסעות?</item>
+        <item>איך מגיעים לשם?</item>
+        <item>מתי יוצאת ההסעה</item>
+        <item>נסתכל במפה</item>
+        <item>נלך כולנו ביחד, יהיה כיף!</item>
+        <item>נפגש שם</item>
+        <item>איך כדאי להתלבש?</item>
+        <item>נפגש ב…</item>
+        <item>אני רוצה מקום בשורה הראשונה</item>
+        <item>אני רוצה לראות את התפריט</item>
+        <item>לאן תרצו לצאת הערב?</item>
+        <item>מתי תהיה מסיבה טובה באיזור?</item>
+        <item>מי מופיע?</item>
+        <item>איפה יש סופרמרקט?</item>
+        <item>איפה יש מאפיה?</item>
+        <item>שמעתי שיש קונדיטוריה ממש טובה באיזור…</item>
+        <item>יש שוק באיזור?</item>
     </string-array>
 </resources>
