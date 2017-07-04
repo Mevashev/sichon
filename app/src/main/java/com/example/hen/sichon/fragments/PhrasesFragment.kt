@@ -66,9 +66,9 @@ class PhrasesFragment : Fragment()
                 AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
             }
 
-            override fun onFavoriteClick(favoritePhrase: String)
+            override fun onFavoriteClick(phraseIndex: Int)
             {
-
+                DataBaseInit.insertFavorite(categoryId, phraseIndex)
             }
         })
 

@@ -11,6 +11,6 @@ interface FavoriteDao {
     fun insertFavorite(favorite: Favorite)
 
 
-    @Query("SELECT * FROM favorite WHERE favorite_phrase LIKE :arg0")
-    fun isFavorite(phrase: String): Favorite
+//    @Query("SELECT * FROM favorite WHERE favorite_phrase LIKE :arg0")
+//    fun isFavorite(phrase: String): Favorite
 }

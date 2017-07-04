@@ -23,7 +23,7 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_phrase, parent, false)
         val viewHolder = ViewHolder(view)
         view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo) })
-        viewHolder.favorite.setOnClickListener({ mListener?.onFavoriteClick( mItems[viewHolder.adapterPosition].translateFrom) })
+        viewHolder.favorite.setOnClickListener({ mListener?.onFavoriteClick( viewHolder.adapterPosition) })
         return viewHolder
     }
 
@@ -48,6 +48,6 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     interface OnPhraseClickListener
     {
         fun onPhraseClick(textToSpeech: String)
-        fun onFavoriteClick(favoritePhrase: String)
+        fun onFavoriteClick(phraseIndex: Int)
     }
 }
