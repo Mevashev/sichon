@@ -14,10 +14,10 @@ object DataBaseInit
         mFavoriteDao = mDb.favoriteDao()
     }
 
-//    fun isFavorite(phrase: String): Favorite
-//    {
-//        return mFavoriteDao.isFavorite(phrase)
-//    }
+    fun isFavorite(categoryId: Int, phraseIndex: Int): Boolean
+    {
+        return mFavoriteDao.isFavorite(categoryId, phraseIndex)?.let { true } ?: false
+    }
 
     fun insertFavorite(categoryId: Int, phraseIndex: Int)
     {
@@ -25,5 +25,9 @@ object DataBaseInit
         mFavoriteDao.insertFavorite(favorite)
     }
 
-
+    fun deleteFavorite(categoryId: Int, phraseIndex: Int)
+    {
+        val favorite = Favorite(categoryId = categoryId, phraseIndex = phraseIndex)
+        mFavoriteDao.deleteFavorite(favorite)
+    }
 }

@@ -57,6 +57,10 @@ class PhrasesFragment : Fragment()
         val toPhrases = toRes.getStringArray(categoryId)
 
         val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
+        for (i in 0 until phrases.size)
+        {
+            phrases[i].isFavorite = DataBaseInit.isFavorite(categoryId, i)
+        }
         val phrasesAdapter = PhrasesAdapter(phrases)
 
         phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener
@@ -68,7 +72,17 @@ class PhrasesFragment : Fragment()
 
             override fun onFavoriteClick(phraseIndex: Int)
             {
-                DataBaseInit.insertFavorite(categoryId, phraseIndex)
+                val isFavorite = DataBaseInit.isFavorite(categoryId, phraseIndex)
+                if (isFavorite)
+                {
+                    DataBaseInit.deleteFavorite(categoryId, phraseIndex)
+                    phrasesAdapter.setFavorite(false, phraseIndex)
+                }
+                else
+                {
+                    DataBaseInit.insertFavorite(categoryId, phraseIndex)
+                    phrasesAdapter.setFavorite(true, phraseIndex)
+                }
             }
         })
 
@@ -77,3 +91,4 @@ class PhrasesFragment : Fragment()
     }
 
 }
+

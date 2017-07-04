@@ -1,16 +1,15 @@
 package com.example.hen.sichon.database
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.OnConflictStrategy
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 
 @Dao
 interface FavoriteDao {
     @Insert
     fun insertFavorite(favorite: Favorite)
 
+    @Delete
+    fun deleteFavorite(favorite: Favorite)
 
-//    @Query("SELECT * FROM favorite WHERE favorite_phrase LIKE :arg0")
-//    fun isFavorite(phrase: String): Favorite
+    @Query("SELECT * FROM favorite WHERE category_id LIKE :arg0 AND phrase_index LIKE :arg1")
+    fun isFavorite(categoryId: Int, phraseIndex: Int): Favorite?
 }

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.hen.sichon.R
 import com.example.hen.sichon.models.PhraseModel
@@ -31,6 +32,14 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     {
         holder?.translateFrom?.text = mItems[position].translateFrom
         holder?.translateTo?.text = mItems[position].translateTo
+        if (mItems[position].isFavorite)
+        {
+            holder?.favorite?.setImageResource(R.drawable.ic_star)
+        }
+        else
+        {
+            holder?.favorite?.setImageResource(R.drawable.ic_star_border)
+        }
     }
 
     fun setOnPhraseClickListener(listener: OnPhraseClickListener)
@@ -38,11 +47,17 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
         mListener = listener
     }
 
+    fun setFavorite(isFavorite: Boolean, index: Int)
+    {
+        mItems[index].isFavorite = isFavorite
+        notifyItemChanged(index)
+    }
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
     {
         val translateFrom = view.findViewById(R.id.text_view_translate_from) as TextView
         val translateTo = view.findViewById(R.id.text_view_translate_to) as TextView
-        val favorite: View = view.findViewById(R.id.view_favorite)
+        val favorite: ImageView = view.findViewById(R.id.view_favorite) as ImageView
     }
 
     interface OnPhraseClickListener
