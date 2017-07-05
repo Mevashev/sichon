@@ -1,0 +1,75 @@
+{
+  "categories": [
+    {
+      "categoryId": "CLOCK",
+      "categoryPhrases": [
+        {
+          "id": 0,
+          "english": "Hour",
+          "hebrew": "שעה",
+          "russian": "Час"
+        },
+        {
+          "id": 1,
+          "english": "Minute",
+          "hebrew": "דקה",
+          "russian": "Минут"
+        },
+        {
+          "id": 2,
+          "english": "Second",
+          "hebrew": "שנייה",
+          "russian": "Секунда"
+        },
+        {
+          "id": 3,
+          "english": "Two minutes",
+          "hebrew": "שתי דקות",
+          "russian": "Пара минут"
+        },
+        {
+          "id": 4,
+          "english": "Wait a minute",
+          "hebrew": "חכה דקה",
+          "russian": "Подожди минуту"
+        },
+        {
+          "id": 5,
+          "english": "What time is it?",
+          "hebrew": "מה השעה?",
+          "russian": "Который сейчас час?"
+        },
+        {
+          "id": 6,
+          "english": "The time is…",
+          "hebrew": "השעה…",
+          "russian": "Время…"
+        },
+        {
+          "id": 7,
+          "english": "It's four o'clock",
+          "hebrew": "השעה ארבע",
+          "russian": "Четыре часа"
+        },
+        {
+          "id": 8,
+          "english": "It's six-fifteen",
+          "hebrew": "השעה שש ורבע",
+          "russian": "Это шесть пятнадцать"
+        },
+        {
+          "id": 9,
+          "english": "It's seven-thirty",
+          "hebrew": "השעה שבע וחצי",
+          "russian": "Это семь тридцать"
+        },
+        {
+          "id": 10,
+          "english": "It's a quarter to eight",
+          "hebrew": "השעה רבע לשמונה",
+          "russian": "Это от четверти до восьми"
+        }
+      ]
+    }
+  ]
+}
