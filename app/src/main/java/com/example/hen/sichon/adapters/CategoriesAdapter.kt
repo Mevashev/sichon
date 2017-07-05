@@ -12,7 +12,7 @@ import com.example.hen.sichon.enums.Category
 class CategoriesAdapter(items: Array<Category>) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()
 {
     private val mItems = items
-    private var mListener: ((String) -> Unit)? = null
+    private var mListener: ((Int) -> Unit)? = null
 
     override fun getItemCount(): Int
     {
@@ -23,7 +23,7 @@ class CategoriesAdapter(items: Array<Category>) : RecyclerView.Adapter<Categorie
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_category, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({mListener?.invoke(mItems[viewHolder.adapterPosition].name)})
+        view.setOnClickListener({mListener?.invoke(mItems[viewHolder.adapterPosition].categoryId)})
         return viewHolder
     }
 
@@ -33,7 +33,7 @@ class CategoriesAdapter(items: Array<Category>) : RecyclerView.Adapter<Categorie
         holder?.text?.setText(mItems[position].categoryName)
     }
 
-    fun setOnCategoryClickListener(listener: (String) -> Unit)
+    fun setOnCategoryClickListener(listener: (Int) -> Unit)
     {
         mListener = listener
     }

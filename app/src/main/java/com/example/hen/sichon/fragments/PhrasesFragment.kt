@@ -25,11 +25,11 @@ class PhrasesFragment : Fragment()
     {
         private val ARG_CATEGORY_ID = "arg.CATEGORY_NAME"
 
-        fun getInstance(@ArrayRes categoryId: String): PhrasesFragment
+        fun getInstance(@ArrayRes categoryId: Int): PhrasesFragment
         {
             val fragment = PhrasesFragment()
             val arguments = Bundle()
-            arguments.putString(ARG_CATEGORY_ID, categoryId)
+            arguments.putInt(ARG_CATEGORY_ID, categoryId)
             fragment.arguments = arguments
             return fragment
         }
