@@ -13,7 +13,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import com.example.hen.sichon.R
 import com.example.hen.sichon.adapters.PhrasesAdapter
-import com.example.hen.sichon.database.DataBaseInit
+import com.example.hen.sichon.data.Database
 import com.example.hen.sichon.enums.Language
 import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.PhraseModel
@@ -25,11 +25,11 @@ class PhrasesFragment : Fragment()
     {
         private val ARG_CATEGORY_ID = "arg.CATEGORY_NAME"
 
-        fun getInstance(@ArrayRes categoryId: Int): PhrasesFragment
+        fun getInstance(@ArrayRes categoryId: String): PhrasesFragment
         {
             val fragment = PhrasesFragment()
             val arguments = Bundle()
-            arguments.putInt(ARG_CATEGORY_ID, categoryId)
+            arguments.putString(ARG_CATEGORY_ID, categoryId)
             fragment.arguments = arguments
             return fragment
         }
@@ -57,10 +57,10 @@ class PhrasesFragment : Fragment()
         val toPhrases = toRes.getStringArray(categoryId)
 
         val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
-        for (i in 0 until phrases.size)
-        {
-            phrases[i].isFavorite = DataBaseInit.isFavorite(categoryId, i)
-        }
+//        for (i in 0 until phrases.size)
+//        {
+//            phrases[i].isFavorite = Database.isFavorite(categoryId, i)
+//        }
         val phrasesAdapter = PhrasesAdapter(phrases)
 
         phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener
@@ -72,17 +72,17 @@ class PhrasesFragment : Fragment()
 
             override fun onFavoriteClick(phraseIndex: Int)
             {
-                val isFavorite = DataBaseInit.isFavorite(categoryId, phraseIndex)
-                if (isFavorite)
-                {
-                    DataBaseInit.deleteFavorite(categoryId, phraseIndex)
-                    phrasesAdapter.setFavorite(false, phraseIndex)
-                }
-                else
-                {
-                    DataBaseInit.insertFavorite(categoryId, phraseIndex)
-                    phrasesAdapter.setFavorite(true, phraseIndex)
-                }
+//                val isFavorite = Database.isFavorite(categoryId, phraseIndex)
+//                if (isFavorite)
+//                {
+//                    Database.deleteFavorite(categoryId, phraseIndex)
+//                    phrasesAdapter.setFavorite(false, phraseIndex)
+//                }
+//                else
+//                {
+//                    Database.insertFavorite(categoryId, phraseIndex)
+//                    phrasesAdapter.setFavorite(true, phraseIndex)
+//                }
             }
         })
 

@@ -478,4 +478,33 @@
         <item>שמעתי שיש קונדיטוריה ממש טובה באיזור…</item>
         <item>יש שוק באיזור?</item>
     </string-array>
+
+    <string name="color">צבע</string>
+    <string name="blue">כחול</string>
+    <string name="green">ירוק</string>
+    <string name="black">שחור</string>
+    <string name="white">לבן</string>
+    <string name="yellow">צהוב</string>
+    <string name="red">אדום</string>
+    <string name="purple">סגול</string>
+    <string name="brown">חום</string>
+    <string name="orange">כתום</string>
+    <string name="pale_blue">Pale תכלת</string>
+    <string name="ping">ורוד</string>
+    <string name="gold">זהב</string>
+    <string name="silver">כסף</string>
+    <string name="gray">אפור</string>
+    <string name="bourdeaux">בורדו</string>
+    <string name="colorful">צבעוני</string>
+    <string name="transparent">שקוף</string>
+    <string name="shiny">מבריק</string>
+    <string name="bright">בהיר</string>
+    <string name="dark">כהה</string>
+    <string name="light">אור</string>
+    <string name="shade">צל</string>
+    <string name="darkness">חושך</string>
+    <string name="shades_of">גוונים של…</string>
+    <string name="color_mixing">ערבוב צבעים</string>
+    <string name="solid_color">צבע אחיד</string>
+
 </resources>

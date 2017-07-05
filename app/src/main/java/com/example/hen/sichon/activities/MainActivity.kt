@@ -12,9 +12,10 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.example.hen.sichon.R
 import com.example.hen.sichon.adapters.LanguageAdapter
 import com.example.hen.sichon.adapters.LanguageSelectorAdapter
-import com.example.hen.sichon.database.DataBaseInit
+import com.example.hen.sichon.data.Database
 import com.example.hen.sichon.decorators.LanguageItemDecorator
 import com.example.hen.sichon.enums.Language
+import com.example.hen.sichon.managers.DataManager
 import com.example.hen.sichon.managers.PersistenceManager
 import com.example.hen.sichon.models.LanguageModel
 import com.example.hen.sichon.models.SelectLanguageModel
@@ -35,7 +36,9 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main)
         PersistenceManager.init(applicationContext)
         Stetho.initializeWithDefaults(applicationContext)
-        DataBaseInit.initDb(applicationContext)
+        Database.init(applicationContext)
+        DataManager.init(applicationContext)
+        Database.insertAllPhrases(DataManager.data)
         initLanguageFlagsRecyclerView()
     }
 
