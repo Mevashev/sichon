@@ -57,10 +57,10 @@ class PhrasesFragment : Fragment()
         val toPhrases = toRes.getStringArray(categoryId)
 
         val phrases = fromPhrases.zip(toPhrases!!, { fromPhrase, toPhrase -> PhraseModel(fromPhrase, toPhrase) })
-//        for (i in 0 until phrases.size)
-//        {
-//            phrases[i].isFavorite = Database.isFavorite(categoryId, i)
-//        }
+        for (i in 0 until phrases.size)
+        {
+            phrases[i].isFavorite = Database.isFavorite(categoryId, i)
+        }
         val phrasesAdapter = PhrasesAdapter(phrases)
 
         phrasesAdapter.setOnPhraseClickListener(object : PhrasesAdapter.OnPhraseClickListener
@@ -70,19 +70,19 @@ class PhrasesFragment : Fragment()
                 AppUtils.textToSpeech(activity.baseContext, toLanguage.locale, textToSpeech)
             }
 
-            override fun onFavoriteClick(phraseIndex: Int)
+            override fun onFavoriteClick(phraseId: Int)
             {
-//                val isFavorite = Database.isFavorite(categoryId, phraseIndex)
-//                if (isFavorite)
-//                {
-//                    Database.deleteFavorite(categoryId, phraseIndex)
-//                    phrasesAdapter.setFavorite(false, phraseIndex)
-//                }
-//                else
-//                {
-//                    Database.insertFavorite(categoryId, phraseIndex)
-//                    phrasesAdapter.setFavorite(true, phraseIndex)
-//                }
+                val isFavorite = Database.isFavorite(categoryId, phraseId)
+                if (isFavorite)
+                {
+                    Database.deleteFavorite(categoryId, phraseId)
+                    phrasesAdapter.setFavorite(false, phraseId)
+                }
+                else
+                {
+                    Database.insertFavorite(categoryId, phraseId)
+                    phrasesAdapter.setFavorite(true, phraseId)
+                }
             }
         })
 

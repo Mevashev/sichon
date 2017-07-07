@@ -29,17 +29,17 @@
 
 
     <string-array name="clock">
-        <item>שעה</item>
-        <item>דקה</item>
-        <item>שנייה</item>
-        <item>שתי דקות</item>
-        <item>חכה דקה</item>
-        <item>מה השעה?</item>
-        <item>השעה…</item>
-        <item>השעה ארבע</item>
-        <item>השעה שש ורבע</item>
-        <item>השעה שבע וחצי</item>
-        <item>השעה רבע לשמונה</item>
+        <item>שעה$0</item>
+        <item>דקה$1</item>
+        <item>שנייה$2</item>
+        <item>שתי דקות$3</item>
+        <item>חכה דקה$4</item>
+        <item>מה השעה?$5</item>
+        <item>השעה…$6</item>
+        <item>השעה ארבע$7</item>
+        <item>השעה שש ורבע$8</item>
+        <item>השעה שבע וחצי$9</item>
+        <item>השעה רבע לשמונה$10</item>
     </string-array>
 
     <string-array name="conversation">

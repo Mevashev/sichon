@@ -8,7 +8,7 @@ import android.arch.persistence.room.PrimaryKey
 data class FavoriteEntity(
         @PrimaryKey
         @ColumnInfo(name = "phrase_id") var phraseId: Int?,
-        @ColumnInfo(name = "is_favorite") var isFavorite: Boolean?)
+        @ColumnInfo(name = "category_id") var categoryId: Int?)
 {
-        constructor(): this(0,false)
+        constructor(): this(0,0)
 }

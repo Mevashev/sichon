@@ -29,17 +29,17 @@
 
 
     <string-array name="clock">
-        <item>Час</item>
-        <item>Минут</item>
-        <item>Секунда</item>
-        <item>Пара минут</item>
-        <item>Подожди минуту</item>
-        <item>Который сейчас час?</item>
-        <item>Время…</item>
-        <item>Четыре часа</item>
-        <item>Это шесть пятнадцать</item>
-        <item>Это семь тридцать</item>
-        <item>Это от четверти до восьми</item>
+        <item>Час$0</item>
+        <item>Минут$1</item>
+        <item>Секунд$2</item>
+        <item>Пара минут$3</item>
+        <item>Подожди минуту$4</item>
+        <item>Который сейчас час?$5</item>
+        <item>Время…$6</item>
+        <item>Четыре часа$7</item>
+        <item>Это шесть пятнадцать$8</item>
+        <item>Это семь тридцать$9</item>
+        <item>Это от четверти до восьми$10</item>
     </string-array>
 
     <string-array name="colors">

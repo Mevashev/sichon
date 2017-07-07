@@ -3,8 +3,8 @@ package com.example.hen.sichon.data.daos
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Delete
 import android.arch.persistence.room.Insert
+import android.arch.persistence.room.Query
 import com.example.hen.sichon.data.entities.FavoriteEntity
-import com.example.hen.sichon.data.entities.PhraseEntity
 
 @Dao
 interface FavoriteDao
@@ -15,6 +15,6 @@ interface FavoriteDao
     @Delete
     fun deleteFavorite(phrase: FavoriteEntity)
 
-//    @Query("SELECT * FROM favorites WHERE category_id LIKE :arg0 AND phrase_index LIKE :arg1")
-//    fun isFavorite(categoryId: Int, phraseIndex: Int): PhraseEntity?
+    @Query("SELECT * FROM favorites WHERE category_id LIKE :arg0 AND phrase_id LIKE :arg1")
+    fun isFavorite(categoryId: Int, phraseId: Int): FavoriteEntity?
 }

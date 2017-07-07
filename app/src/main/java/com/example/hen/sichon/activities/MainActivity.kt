@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity()
         PersistenceManager.init(applicationContext)
         Stetho.initializeWithDefaults(applicationContext)
         DataManager.init(applicationContext)
+        Database.init(applicationContext)
         initLanguageFlagsRecyclerView()
     }
 

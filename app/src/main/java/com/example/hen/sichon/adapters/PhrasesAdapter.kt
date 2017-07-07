@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.hen.sichon.R
+import com.example.hen.sichon.getId
+import com.example.hen.sichon.getValue
 import com.example.hen.sichon.models.PhraseModel
 
 class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAdapter.ViewHolder>()
@@ -23,15 +25,15 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_phrase, parent, false)
         val viewHolder = ViewHolder(view)
-        view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo) })
-        viewHolder.favorite.setOnClickListener({ mListener?.onFavoriteClick( viewHolder.adapterPosition) })
+        view.setOnClickListener({ mListener?.onPhraseClick(mItems[viewHolder.adapterPosition].translateTo.getValue()) })
+        viewHolder.favorite.setOnClickListener({ mListener?.onFavoriteClick( mItems[viewHolder.adapterPosition].translateTo.getId()) })
         return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int)
     {
-        holder?.translateFrom?.text = mItems[position].translateFrom
-        holder?.translateTo?.text = mItems[position].translateTo
+        holder?.translateFrom?.text = mItems[position].translateFrom.getValue()
+        holder?.translateTo?.text = mItems[position].translateTo.getValue()
         if (mItems[position].isFavorite)
         {
             holder?.favorite?.setImageResource(R.drawable.ic_star)
@@ -63,6 +65,6 @@ class PhrasesAdapter(items: List<PhraseModel>) : RecyclerView.Adapter<PhrasesAda
     interface OnPhraseClickListener
     {
         fun onPhraseClick(textToSpeech: String)
-        fun onFavoriteClick(phraseIndex: Int)
+        fun onFavoriteClick(phraseId: Int)
     }
 }

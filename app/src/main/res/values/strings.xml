@@ -64,17 +64,17 @@
     </string-array>
 
     <string-array name="clock">
-        <item>Hour</item>
-        <item>Minute</item>
-        <item>Second</item>
-        <item>Two minutes</item>
-        <item>Wait a minute</item>
-        <item>What time is it?</item>
-        <item>The time is…</item>
-        <item>It\'s four o\'clock</item>
-        <item>It\'s six-fifteen</item>
-        <item>It\'s seven-thirty</item>
-        <item>It\'s a quarter to eight</item>
+        <item>Hour$0</item>
+        <item>Minute$1</item>
+        <item>Second$2</item>
+        <item>Two minutes$3</item>
+        <item>Wait a minute$4</item>
+        <item>What time is it?$5</item>
+        <item>The time is…$6</item>
+        <item>It\'s four o\'clock$7</item>
+        <item>It\'s six-fifteen$8</item>
+        <item>It\'s seven-thirty$9</item>
+        <item>It\'s a quarter to eight$10</item>
     </string-array>
 
     <string-array name="conversation">
