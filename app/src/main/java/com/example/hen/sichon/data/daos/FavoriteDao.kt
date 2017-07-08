@@ -17,4 +17,7 @@ interface FavoriteDao
 
     @Query("SELECT * FROM favorites WHERE category_id LIKE :arg0 AND phrase_id LIKE :arg1")
     fun isFavorite(categoryId: Int, phraseId: Int): FavoriteEntity?
+
+    @Query("SELECT * FROM favorites")
+    fun getFavorites(): List<FavoriteEntity>
 }
