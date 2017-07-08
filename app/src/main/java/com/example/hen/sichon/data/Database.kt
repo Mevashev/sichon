@@ -21,6 +21,11 @@ object Database
         return mFavoriteDao.isFavorite(categoryId, phraseId)?.let { true } ?: false
     }
 
+    fun getFavorites(): List<FavoriteEntity>
+    {
+        return mFavoriteDao.getFavorites()
+    }
+
     fun insertFavorite(categoryId: Int, phraseId: Int)
     {
         val favorite = FavoriteEntity(phraseId = phraseId, categoryId = categoryId)
